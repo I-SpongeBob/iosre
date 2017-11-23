@@ -1,0 +1,83 @@
+%hook MultiSelectContactsViewController
+- (void)setM_selectedUsername:(NSString *)m_selectedUsername { %log; %orig; }
+- (NSString *)m_selectedUsername { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setM_bSearchSnsContact:(_Bool )m_bSearchSnsContact { %log; %orig; }
+- (_Bool )m_bSearchSnsContact { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_onlyChatRoom:(_Bool )m_onlyChatRoom { %log; %orig; }
+- (_Bool )m_onlyChatRoom { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_bKeepCurViewAfterSelect:(_Bool )m_bKeepCurViewAfterSelect { %log; %orig; }
+- (_Bool )m_bKeepCurViewAfterSelect { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_commonSearchScene:(int )m_commonSearchScene { %log; %orig; }
+- (int )m_commonSearchScene { %log; int  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_dicMultiSelect:(NSMutableDictionary *)m_dicMultiSelect { %log; %orig; }
+- (NSMutableDictionary *)m_dicMultiSelect { %log; NSMutableDictionary * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setM_showTip:(NSString *)m_showTip { %log; %orig; }
+- (NSString *)m_showTip { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setM_memberCountLimit:(unsigned long long )m_memberCountLimit { %log; %orig; }
+- (unsigned long long )m_memberCountLimit { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (void)setM_panelBtnItem:(UIBarButtonItem *)m_panelBtnItem { %log; %orig; }
+- (UIBarButtonItem *)m_panelBtnItem { %log; UIBarButtonItem * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setM_panelBtn:(UIButton *)m_panelBtn { %log; %orig; }
+- (UIButton *)m_panelBtn { %log; UIButton * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setM_uiGroupScene:(unsigned int )m_uiGroupScene { %log; %orig; }
+- (unsigned int )m_uiGroupScene { %log; unsigned int  r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (void)setM_bShowBrandContact:(_Bool )m_bShowBrandContact { %log; %orig; }
+- (_Bool )m_bShowBrandContact { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_bShowRadarCreateRoom:(_Bool )m_bShowRadarCreateRoom { %log; %orig; }
+- (_Bool )m_bShowRadarCreateRoom { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_bShowHistoryGroup:(_Bool )m_bShowHistoryGroup { %log; %orig; }
+- (_Bool )m_bShowHistoryGroup { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_dicIgnoreContact:(NSDictionary *)m_dicIgnoreContact { %log; %orig; }
+- (NSDictionary *)m_dicIgnoreContact { %log; NSDictionary * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setM_dicExistContact:(NSDictionary *)m_dicExistContact { %log; %orig; }
+- (NSDictionary *)m_dicExistContact { %log; NSDictionary * r = %orig; HBLogDebug(@" = %@", r); return r; }
+//- (void)setM_delegate:(__weak id <MultiSelectContactsViewControllerDelegate> )m_delegate { %log; %orig; }
+//- (__weak id <MultiSelectContactsViewControllerDelegate> )m_delegate { %log; __weak id <MultiSelectContactsViewControllerDelegate>  r = %orig; HBLogDebug(@" = 0x%x", (unsigned int)r); return r; }
+//- (void).cxx_destruct { %log; %orig; }
+- (void)onSelectDoneWithContacts:(id)arg1 { %log; %orig; }
+- (void)cancelSearch { %log; %orig; }
+- (void)doSearch:(id)arg1 Pre:(_Bool)arg2 { %log; %orig; }
+- (void)searchTextFieldDidBeginEditing { %log; %orig; }
+- (void)didDeleteLastWithKey:(id)arg1 { %log; %orig; }
+- (void)didClickImageAtIndex:(unsigned int)arg1 withKey:(id)arg2 { %log; %orig; }
+- (void)onSelectSearchSnsContact:(id)arg1 { %log; %orig; }
+- (void)onSelectContact:(id)arg1 { %log; %orig; }
+- (_Bool)onShouldSelectContact:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)doTagSearch:(id)arg1 arrContacts:(id)arg2 { %log; %orig; }
+- (void)didSearchViewTableSelect:(id)arg1 { %log; %orig; }
+- (double)heightForSearchViewTable:(id)arg1 { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (id)cellForSearchViewTable:(id)arg1 index:(id)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)makeFiterContactToTagSearchView:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)onFilterContactCandidate:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)onSelectRadarCreateRoom { %log; %orig; }
+- (void)onSelectHistoryGroup { %log; %orig; }
+- (void)onContactSelectSearchSections:(id)arg1 sectionTitles:(id)arg2 sectionResults:(id)arg3 { %log; %orig; }
+- (void)scrollViewWillBeginDragging:(id)arg1 { %log; %orig; }
+- (void)tryShowSelectTip:(unsigned long long)arg1 currentSelectCount:(unsigned long long)arg2 { %log; %orig; }
+- (void)onTipsViewClick:(id)arg1 { %log; %orig; }
+- (unsigned long long)getTotalSelectCount { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (void)dealloc { %log; %orig; }
+- (void)viewDidUnload { %log; %orig; }
+- (void)viewWillDisappear:(_Bool)arg1 { %log; %orig; }
+- (void)willAnimateRotationToInterfaceOrientation:(long long)arg1 duration:(double)arg2 { %log; %orig; }
+- (void)viewDidLayoutSubviews { %log; %orig; }
+- (void)viewDidAppear:(_Bool)arg1 { %log; %orig; }
+- (void)updateSelectedHeadImgView { %log; %orig; }
+- (void)viewDidLoad { %log; %orig; }
+- (void)initView { %log; %orig; }
+- (void)initTitleArea { %log; %orig; }
+- (void)onDone:(id)arg1 { %log; %orig; }
+- (void)onCancel:(id)arg1 { %log; %orig; }
+- (void)updatePanelView:(id)arg1 { %log; %orig; }
+- (void)updatePanelBtn { %log; %orig; }
+- (_Bool)isExisted:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isIgnore:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)onGroupMultiSelectContactReturn:(id)arg1 { %log; %orig; }
+- (void)onGroupSelectContactReturn:(id)arg1 { %log; %orig; }
+- (void)UpdateForChatGroup:(id)arg1 { %log; %orig; }
+- (id)init { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)debugDescription { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)description { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long )hash { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (Class )superclass { %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end

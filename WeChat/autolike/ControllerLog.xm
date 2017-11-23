@@ -1,0 +1,242 @@
+%hook WCTimeLineViewController
+- (void)setM_hasNewPhotoWhenEnter:(_Bool )m_hasNewPhotoWhenEnter { %log; %orig; }
+- (_Bool )m_hasNewPhotoWhenEnter { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_hasRefrashHead:(_Bool )m_hasRefrashHead { %log; %orig; }
+- (_Bool )m_hasRefrashHead { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+//- (void)setM_delegate:(__weak id <WCTimeLineViewControllerDelegate> )m_delegate { %log; %orig; }
+//- (__weak id <WCTimeLineViewControllerDelegate> )m_delegate { %log; __weak id <WCTimeLineViewControllerDelegate>  r = %orig; HBLogDebug(@" = 0x%x", (unsigned int)r); return r; }
+//- (id).cxx_construct { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+//- (void).cxx_destruct { %log; %orig; }
+- (void)abTestViewHiddenWrap { %log; %orig; }
+- (void)onExposeCancel { %log; %orig; }
+- (void)onExposeComplete { %log; %orig; }
+- (void)floatViewHiddenWrap { %log; %orig; }
+- (void)calADCellYVisible:(_Bool *)arg1 centerVisible:(_Bool *)arg2 bottomVisible:(_Bool *)arg3 forRowAtIndexPath:(id)arg4 { %log; %orig; }
+- (void)recordADCommentEndInfo:(id)arg1 forRowAtIndexPath:(id)arg2 { %log; %orig; }
+- (void)recordADCommentMiddleInfo:(id)arg1 forRowAtIndexPath:(id)arg2 { %log; %orig; }
+- (void)recordADCommentStartInfo:(id)arg1 forRowAtIndexPath:(id)arg2 { %log; %orig; }
+- (void)recordADBodyEndInfo:(id)arg1 forRowAtIndexPath:(id)arg2 { %log; %orig; }
+- (void)recordADBodyMiddleInfo:(id)arg1 forRowAtIndexPath:(id)arg2 { %log; %orig; }
+- (void)recordADBodyStartInfo:(id)arg1 forRowAtIndexPath:(id)arg2 { %log; %orig; }
+- (void)handleABTestTipClickEvent:(id)arg1 actionItem:(id)arg2 dataItem:(id)arg3 { %log; %orig; }
+- (void)alertView:(id)arg1 clickedButtonAtIndex:(long long)arg2 { %log; %orig; }
+- (void)showABTestAlert:(id)arg1 dataItem:(id)arg2 { %log; %orig; }
+- (void)tryLogABTestResult:(id)arg1 { %log; %orig; }
+- (void)refreshCacheForABTestTip:(id)arg1 { %log; %orig; }
+- (void)tryReportAdCell:(id)arg1 { %log; %orig; }
+- (void)checkDBAutoRecover { %log; %orig; }
+- (void)onPlayNewMsgNotify { %log; %orig; }
+- (void)onClickTipsBtn:(unsigned long long)arg1 { %log; %orig; }
+- (_Bool)shouldInteractivePop { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)updateNetworkStatus { %log; %orig; }
+- (void)onLinkClicked:(id)arg1 backupUrl:(id)arg2 withRect:(struct CGRect)arg3 extraInfo:(id)arg4 { %log; %orig; }
+- (void)onLinkClicked:(id)arg1 backupUrl:(id)arg2 withRect:(struct CGRect)arg3 { %log; %orig; }
+- (void)onLinkClicked:(id)arg1 withRect:(struct CGRect)arg2 { %log; %orig; }
+- (void)onLinkClickedItem:(id)arg1 url:(id)arg2 backupUrl:(id)arg3 withRect:(struct CGRect)arg4 { %log; %orig; }
+- (void)handleUrl:(id)arg1 backupUrl:(id)arg2 { %log; %orig; }
+- (void)handleUrl:(id)arg1 backupUrl:(id)arg2 item:(id)arg3 { %log; %orig; }
+- (void)jumpToUserProfile:(id)arg1 Displayname:(id)arg2 Scence:(unsigned int)arg3 userData:(id)arg4 { %log; %orig; }
+- (id)getAppIdFromUrl:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)onBindFacebookFinish:(unsigned int)arg1 { %log; %orig; }
+- (void)onDismissViewController:(id)arg1 userName:(id)arg2 { %log; %orig; }
+- (void)onRestoreCommentView:(id)arg1 ofDataItem:(id)arg2 { %log; %orig; }
+- (void)onReloadCommentView:(id)arg1 ofDataItem:(id)arg2 { %log; %orig; }
+- (void)onReplyComment:(id)arg1 ofDataItem:(id)arg2 ofTouchedView:(id)arg3 { %log; %orig; }
+- (void)onRestoreTimeLineCellView:(id)arg1 { %log; %orig; }
+- (void)cleanCellHeightCache:(id)arg1 { %log; %orig; }
+- (void)onActionClearCellCacheAndRefreshCellView:(id)arg1 { %log; %orig; }
+- (void)onEditBlackList:(id)arg1 { %log; %orig; }
+- (id)getView { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)onActionLocation:(id)arg1 { %log; %orig; }
+- (void)onTimeLineCellMoreMenu:(id)arg1 forScene:(unsigned int)arg2 { %log; %orig; }
+- (void)onTimeLineCellMoreMenu:(id)arg1 { %log; %orig; }
+- (void)onShowDetailViewForDataItem:(id)arg1 { %log; %orig; }
+- (void)onShowDetailChanged:(id)arg1 bShowDetailBeforeChange:(_Bool)arg2 { %log; %orig; }
+- (void)onUpdateDataItem:(id)arg1 oldHeight:(double)arg2 newHeight:(double)arg3 { %log; %orig; }
+- (void)onCommentDataItem:(id)arg1 point:(struct CGPoint)arg2 { %log; %orig; NSLog(@"%@",[arg1 class]);}
+- (void)onAdvertiseAction:(id)arg1 point:(struct CGPoint)arg2 { %log; %orig; }
+- (void)onActionFloatView:(id)arg1 didSelectReason:(id)arg2 { %log; %orig; }
+- (void)onRemoveAd { %log; %orig; }
+- (void)onAdActoin:(id)arg1 { %log; %orig; }
+- (void)onDontLikeWithChoose:(id)arg1 { %log; %orig; }
+- (void)onDontLikeWithOtherReason:(id)arg1 QuestionExp:(id)arg2 { %log; %orig; }
+- (void)onClickTipBtn:(id)arg1 { %log; %orig; }
+- (void)onHideAdvertise:(id)arg1 { %log; %orig; }
+- (void)onViewAnimationDidHiden { %log; %orig; }
+- (void)onViewAnimationWillHide { %log; %orig; }
+- (void)onIKnowItBtnClicked { %log; %orig; }
+- (void)onTouchDownLikeBtnOnFloatView { %log; %orig; }
+- (void)onClickCommentBtnOnFloatView { %log; %orig; }
+- (void)onActionAtAd:(id)arg1 { %log; %orig; }
+- (void)showComment:(id)arg1 refComment:(id)arg2 touchedView:(id)arg3 isActionAtAd:(_Bool)arg4 { %log; %orig; }
+- (double)totalHeightFromTopToSection:(unsigned long long)arg1 { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (unsigned long long)sectionIndexForDataItemWithTid:(id)arg1 { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (id)visibleTimeLineCellViewWithTid:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)showContactInfo { %log; %orig; }
+- (void)onReveiceWCMessage:(id)arg1 { %log; %orig; }
+- (void)onMessageUnReadCountChanged { %log; %orig; }
+- (void)checkNewMessage { %log; %orig; }
+- (_Bool)hasUnReadMessage { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)shouldUpdateMessageButton:(id)arg1 { %log; %orig; }
+- (void)resetHeaderView { %log; %orig; }
+- (void)MMRefreshTableFooterDidTriggerRefresh:(id)arg1 { %log; %orig; }
+- (void)showUploadOption:(id)arg1 { %log; %orig; }
+- (void)showPhotoAlert:(id)arg1 { %log; %orig; }
+- (void)actionSheet:(id)arg1 clickedButtonAtIndex:(long long)arg2 { %log; %orig; }
+- (void)onSightPictureTaken:(id)arg1 imageData:(id)arg2 withFrontCamera:(_Bool)arg3 editImageAttr:(id)arg4 { %log; %orig; }
+- (void)onShortVideoTaken:(id)arg1 thumbImg:(id)arg2 sentImmediately:(_Bool)arg3 isMuted:(_Bool)arg4 editVideoAttr:(id)arg5 { %log; %orig; }
+- (id)getViewController { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)MMImagePickerManagerDidCancel:(id)arg1 { %log; %orig; }
+- (void)MMImagePickerManager:(id)arg1 didFinishPickingVideoWithInfo:(id)arg2 { %log; %orig; }
+- (void)MMImagePickerManager:(id)arg1 didFinishPickingSightWithInfo:(id)arg2 { %log; %orig; }
+- (void)MMImagePickerManager:(id)arg1 didFinishPickingImageWithInfo:(id)arg2 { %log; %orig; }
+- (void)editShield:(id)arg1 forScene:(int)arg2 { %log; %orig; }
+- (void)editShield:(id)arg1 { %log; %orig; }
+- (void)editBlackList:(id)arg1 forSource:(int)arg2 { %log; %orig; }
+- (void)showImagePicker:(long long)arg1 { %log; %orig; }
+- (void)openCommitViewControllerWithSightDraft:(id)arg1 { %log; %orig; }
+- (void)openCommitViewController:(_Bool)arg1 arrImage:(id)arg2 { %log; %orig; }
+- (void)onBarTipClicked { %log; %orig; }
+- (_Bool)scrollViewShouldScrollToTop:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)refreshHeadForShowTip { %log; %orig; }
+- (void)scrollViewDidEndDecelerating:(id)arg1 { %log; %orig; }
+- (void)scrollViewDidEndDragging:(id)arg1 willDecelerate:(_Bool)arg2 { %log; %orig; }
+- (void)scrollViewDidScroll:(id)arg1 { %log; %orig; }
+- (void)scrollViewWillBeginDragging:(id)arg1 { %log; %orig; }
+- (void)hideMenu { %log; %orig; }
+- (void)logUserOpInfoAsScreenShot { %log; %orig; }
+- (_Bool)egoRefreshTableHeaderDataSourceIsLoading:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)egoRefreshTableHeaderDidTriggerRefresh:(id)arg1 { %log; %orig; }
+- (void)stopRefreshHeaderView { %log; %orig; }
+- (void)refreshHead { %log; %orig; }
+- (void)onMediaItemSizeDidChange:(id)arg1 { %log; %orig; }
+- (void)onWCGroupModMemberReturn:(_Bool)arg1 group:(id)arg2 { %log; %orig; }
+- (void)onNoMoreTimelineData { %log; %orig; }
+- (void)onDataChangedWithAdded:(id)arg1 andChanged:(id)arg2 andDeleted:(id)arg3 { %log; %orig; }
+- (void)onCommentReturn:(id)arg1 { %log; %orig; }
+- (void)onLoadMore { %log; %orig; }
+- (void)initData { %log; %orig; }
+- (void)onMenuControllerWillHide:(id)arg1 { %log; %orig; }
+- (void)onMenuControllerDidHide:(id)arg1 { %log; %orig; }
+- (void)onMenuControllerWillShow:(id)arg1 { %log; %orig; }
+- (void)touchesCancelled_TableView:(id)arg1 withEvent:(id)arg2 { %log; %orig; }
+- (void)touchesEnded_TableView:(id)arg1 withEvent:(id)arg2 { %log; %orig; }
+- (void)touchesMoved_TableView:(id)arg1 withEvent:(id)arg2 { %log; %orig; }
+- (void)touchesBegan_TableView:(id)arg1 withEvent:(id)arg2 { %log; %orig; }
+- (void)tryResumeStatus { %log; %orig; }
+- (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2 { %log; %orig; }
+- (void)showDetailView:(id)arg1 { %log; %orig; }
+- (void)showDetailViewForFoldedSight:(id)arg1 { %log; %orig; }
+- (void)showDetailViewForFailedCommentItem:(id)arg1 { %log; %orig; }
+- (void)showDetailViewForDataItem:(id)arg1 { %log; %orig; }
+- (void)onDeleteData { %log; %orig; }
+- (void)onRestartUpload { %log; %orig; }
+- (void)showMessageList { %log; %orig; }
+- (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)tableView:(id)arg1 didEndDisplayingCell:(id)arg2 forRowAtIndexPath:(id)arg3 { %log; %orig; }
+- (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3 { %log; %orig; }
+- (void)tryLogThumbImageLoadedEffiency:(id)arg1 { %log; %orig; }
+- (void)genRedHeartCell:(id)arg1 indexPath:(id)arg2 { %log; %orig; }
+- (void)genUploadFailCell:(id)arg1 indexPath:(id)arg2 { %log; %orig; }
+- (void)genABTestTipCell:(id)arg1 indexPath:(id)arg2 { %log; %orig; }
+- (void)genNormalCell:(id)arg1 indexPath:(id)arg2 { %log; %orig; }
+- (_Bool)GetIsLastCommentOrLikeCell:(id)arg1 RowIndex:(long long)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)GetIsCommentCellRow:(id)arg1 RowIndex:(long long)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)hideAlbumListLineViewInCell:(id)arg1 { %log; %orig; }
+- (void)resetAlbumListLineViewsFrameInCell:(id)arg1 indexPath:(id)arg2 { %log; %orig; }
+- (id)getUploadFailItemsFroView { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (double)getCellLineContentMarginCurOri { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (double)tableView:(id)arg1 heightForRowAtIndexPath:(id)arg2 { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2 { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (long long)numberOfSectionsInTableView:(id)arg1 { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (void)hideFloatView { %log; %orig; }
+- (long long)calcDataItemIndex:(long long)arg1 { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (long long)getFirstNormalItemIndex { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (void)willDisshow { %log; %orig; }
+- (void)onNetworkActivityStatusChanged { %log; %orig; }
+- (void)willShow { %log; %orig; }
+- (void)willDisappear { %log; %orig; }
+- (void)didAppear { %log; %orig; }
+- (void)willAppear { %log; %orig; }
+- (void)viewWillBePoped:(_Bool)arg1 { %log; %orig; }
+- (void)viewWillBePushed:(_Bool)arg1 { %log; %orig; }
+- (void)viewWillPush:(_Bool)arg1 { %log; %orig; }
+- (void)viewDidDisappear:(_Bool)arg1 { %log; %orig; }
+- (void)viewWillDisappear:(_Bool)arg1 { %log; %orig; }
+- (void)delayReload { %log; %orig; }
+- (void)viewWillAppear:(_Bool)arg1 { %log; %orig; }
+- (void)didReceiveMemoryWarning { %log; %orig; }
+- (void)dealloc { %log; %orig; }
+- (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)panned:(id)arg1 { %log; %orig; }
+- (void)viewDidLoad { %log; %orig; }
+- (void)resetRightBarItem { %log; %orig; }
+- (void)viewDidLayoutSubviews { %log; %orig; }
+- (void)adjustViewAndNavBarRect { %log; %orig; }
+- (void)willRotateToInterfaceOrientation:(long long)arg1 duration:(double)arg2 { %log; %orig; }
+- (unsigned long long)supportedInterfaceOrientations { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (_Bool)shouldRotateToInterfaceOrientation:(long long)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)resetStatus:(_Bool)arg1 { %log; %orig; }
+- (void)asyncLogUnreadMsgCount { %log; %orig; }
+- (void)startLogBrowseInfo:(_Bool)arg1 { %log; %orig; }
+- (void)onTimeLineViewReturn { %log; %orig; }
+- (void)handleLongPressEx:(id)arg1 { %log; %orig; }
+- (void)openWriteTextViewController { %log; %orig; }
+- (void)OnFinishComment:(_Bool)arg1 { %log; %orig; }
+- (void)resetRightButtonStatus { %log; %orig; }
+- (void)reloadTableView { %log; %orig; }
+- (void)didDisshow { %log; %orig; }
+- (void)setToTopCell { %log; %orig; }
+- (void)cacheInputText { %log; %orig; }
+- (void)clearWCCache { %log; %orig; }
+- (void)reloadDataWrap { %log; %orig; }
+- (void)viewDidBePushed:(_Bool)arg1 { %log; %orig; }
+- (void)viewDidAppear:(_Bool)arg1 { %log; %orig; }
+- (void)showBarButton:(id)arg1 { %log; %orig; }
+- (id)init { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+//- (MMURLHandler *)m_urlHandler { %log; MMURLHandler * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)didCommitText:(id)arg1 { %log; %orig; }
+- (void)textViewTextDidChange { %log; %orig; }
+- (void)updateWordCnt:(int)arg1 { %log; %orig; }
+- (void)onHideKeyboard { %log; %orig; }
+- (void)MMGrowTextViewBeginEditing:(id)arg1 { %log; %orig; }
+- (void)MMGrowTextViewHeightDidChanged:(id)arg1 { %log; %orig; }
+- (void)keyboardWillHide { %log; %orig; }
+- (void)updateContentOffset { %log; %orig; }
+- (void)reloadExpressionButtonImage:(int)arg1 { %log; %orig; }
+- (void)onExpressionButtonClicked:(id)arg1 { %log; %orig; }
+- (void)ensureInitInputView { %log; %orig; }
+- (void)initEmoticonView { %log; %orig; }
+- (void)initInputToolView { %log; %orig; }
+- (void)traitCollectionDidChange:(id)arg1 { %log; %orig; }
+- (void)previewingContext:(id)arg1 commitViewController:(id)arg2 { %log; %orig; }
+- (id)previewingContext:(id)arg1 viewControllerForLocation:(struct CGPoint)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)onTranslateSnsChangedFromPhotoContent:(id)arg1 { %log; %orig; }
+- (void)onHideUrlFeedComfirmSuccess:(id)arg1 { %log; %orig; }
+- (void)onHideUrlFeedComfirmFail:(id)arg1 { %log; %orig; }
+- (void)onHideUrlFeedComfirmBegin:(id)arg1 { %log; %orig; }
+- (void)onViewSightOutFullScreen { %log; %orig; }
+- (void)onViewSightInFullScreen { %log; %orig; }
+- (void)refreshWholeView { %log; %orig; }
+- (void)refreshWholeViewWithFixedDataItem:(id)arg1 { %log; %orig; }
+- (void)onWCCanvasContentItemViewOutFullScreen:(id)arg1 { %log; %orig; }
+- (void)onWCCanvasContentItemViewInFullScreen:(id)arg1 { %log; %orig; }
+- (void)onWCContentItemViewOutFullScreen { %log; %orig; }
+- (void)onWCContentItemViewInFullScreen { %log; %orig; }
+- (void)onWCContentItemViewExposeMenu:(id)arg1 scene:(int)arg2 { %log; %orig; }
+- (void)onWCContentItemViewMoreMenu:(id)arg1 sender:(id)arg2 { %log; %orig; }
+- (void)animationDidStop:(id)arg1 finished:(id)arg2 context:(void *)arg3 { %log; %orig; }
+- (void)scrollViewDidEndScrollingAnimation:(id)arg1 { %log; %orig; }
+- (void)commitAnimationWillStart:(id)arg1 { %log; %orig; }
+- (void)animationDidEndRemainView:(id)arg1 hintDataItem:(id)arg2 { %log; %orig; }
+- (void)scrollTableViewToShowDataItem:(id)arg1 { %log; %orig; }
+- (void)showAnimationToImageView { %log; %orig; }
+- (void)setAnimatedImageHidden:(_Bool)arg1 withTimeLineCellView:(id)arg2 { %log; %orig; }
+- (void)setAnimatedImageHidden:(_Bool)arg1 { %log; %orig; }
+- (void)clearAnimationPropertiesProtection { %log; %orig; }
+- (void)clearAnimationProperties { %log; %orig; }
+- (NSString *)debugDescription { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)description { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long )hash { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (Class )superclass { %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end

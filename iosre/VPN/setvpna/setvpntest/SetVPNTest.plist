@@ -1,0 +1,9 @@
+{
+	Filter = {
+		Bundles = (
+			"com.apress.qwereeee",
+			"com.apple.springboard",
+			"com.apple.Preferences",
+		);
+	};
+}

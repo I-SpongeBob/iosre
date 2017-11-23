@@ -1,0 +1,9 @@
+{
+	Filter = {
+		Bundles = (
+			"com.apple.springboard",
+			"com.apple.preferences",
+			"com.apple.UIKit",
+		);
+	};
+}

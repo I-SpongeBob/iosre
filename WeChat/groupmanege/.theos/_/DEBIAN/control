@@ -1,0 +1,10 @@
+Package: com.lingyongqian.groupmanage
+Name: GroupManege
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: xieruxin
+Author: xieruxin
+Section: Tweaks
+Version: 0.0.1-19+debug
+Installed-Size: 196

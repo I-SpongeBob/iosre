@@ -1,0 +1,458 @@
+%hook WCFacade
+- (void).cxx_destruct { %log; %orig; }
+- (void)StartDownloadImage:(id)arg1 DownloadType:(int)arg2 { %log; %orig; }
+- (void)setMessageNotificationForDataItem:(id)arg1 ignored:(_Bool)arg2 { %log; %orig; }
+- (void)markHasShowSnsCommitDragTip { %log; %orig; }
+- (_Bool)shouldShowSnsCommitDragTip { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)markHasShowSnsRecentSettingGuide { %log; %orig; }
+- (_Bool)shouldShowSnsRecentSettingGuide { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)updateVideoDownloadModeWithMediaId:(id)arg1 downloadMode:(unsigned long long)arg2 { %log; %orig; }
+- (unsigned long long)GetMediaVideoDownloadingModeWithMediaItem:(id)arg1 { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (void)delayDownloadVideoRemainPart:(id)arg1 DownloadMode:(unsigned long long)arg2 { %log; %orig; }
+- (_Bool)IsMediaItemInDownloadQueue:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)IsVideoDataAvailableByClientMediaID:(id)arg1 offset:(unsigned int)arg2 length:(unsigned int)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)RequestVideoDataByClientMediaID:(id)arg1 offset:(unsigned int)arg2 length:(unsigned int)arg3 durationSec:(unsigned int)arg4 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)StopDownloadVideoWithMediaItem:(id)arg1 Result:(struct C2CDownloadResult *)arg2 { %log; %orig; }
+- (void)startPreloadSnsVideoMedia:(id)arg1 { %log; %orig; }
+- (unsigned long long)startDownloadSightMedia:(id)arg1 DownloadMode:(unsigned long long)arg2 { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (unsigned long long)startDownloadSightMedia:(id)arg1 { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (unsigned long long)GetWCVideoDownloadMode:(id)arg1 { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (_Bool)isCanvasTypesAllValid:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)updateSightThumbToMatchVideoIfNeededWithMediaItem:(id)arg1 completion:(CDUnknownBlockType)arg2 { %log; %orig; }
+- (void)updateBackGroundTime { %log; %orig; }
+- (void)setStartEnterBackGroundTime { %log; %orig; }
+- (void)logUploadFinished:(id)arg1 { %log; %orig; }
+- (void)logEnterBackground { %log; %orig; }
+- (void)logEnterForeground { %log; %orig; }
+- (int)getCurrentPage { %log; int r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)updateCurrentPage:(int)arg1 { %log; %orig; }
+- (id)getLocalSightDataItemsForWhatsNew { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)OnGetNewXmlMsg:(id)arg1 Type:(id)arg2 MsgWrap:(id)arg3 { %log; %orig; }
+- (void)stopSightMgrHolding { %log; %orig; }
+- (void)clearSightViewCache { %log; %orig; }
+- (void)clearAllSightPlayStatusCache { %log; %orig; }
+- (void)deleteSightViewByItemID:(id)arg1 { %log; %orig; }
+- (id)getSightViewByItemID:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setSightView:(id)arg1 andItemID:(id)arg2 { %log; %orig; }
+- (void)deleteSightDownloadProgressByItemID:(id)arg1 { %log; %orig; }
+- (id)getSightDownloadProgressByItemID:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setSightDownloadProgress:(float)arg1 andItemID:(id)arg2 { %log; %orig; }
+- (id)getSightPlayStatusByItemID:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setSightPlayStatus:(_Bool)arg1 andItemID:(id)arg2 { %log; %orig; }
+- (void)onModifyABTestItem:(id)arg1 bizId:(id)arg2 abTestItem:(id)arg3 { %log; %orig; }
+- (void)onDiskStorageWarningCleanedSize:(unsigned long long *)arg1 CacheMask:(unsigned int)arg2 { %log; %orig; }
+- (void)onDiskStorageWarningCleanedSize:(unsigned long long *)arg1 subQueue:(id)arg2 { %log; %orig; }
+- (void)onDiskStorageWarningCleanedSize:(unsigned long long *)arg1 { %log; %orig; }
+- (void)onFontSizeChange { %log; %orig; }
+- (id)getWCOperSetting { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)trySaveWCOperSetting { %log; %orig; }
+- (id)pathForWCOperationSetting { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)haveSeenItemForClickRatio:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)updateLastSeenItemForClickRatio:(id)arg1 { %log; %orig; }
+- (id)getLastSeenItemForClickRatio { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)clearDelayShowInfoCache { %log; %orig; }
+- (void)setShowTime:(unsigned int)arg1 WithFeedId:(id)arg2 { %log; %orig; }
+- (void)setDelayShowInfoNeedDelay:(id)arg1 { %log; %orig; }
+- (void)saveSnsLocalCache { %log; %orig; }
+- (void)mergeSnsOperationsWithFeedId:(id)arg1 feedCreateTime:(unsigned int)arg2 snsOperationsData:(id)arg3 { %log; %orig; }
+- (id)getSnsOperationWrapWithFeedId:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getSnsOperationsWithFeedId:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)onPreloadSnsVideoMedia:(id)arg1 { %log; %orig; }
+- (_Bool)isInPreloadAroundImgLimitTime { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)couldPreloadBigImageForUser:(id)arg1 limit:(int)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)getAllAdDataItems { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getDownloadMgr { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getTimelineMgr { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)hasPreloadDataItemForBigImage:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)hasPreloadDataItemForSmallImage:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)resumePreloadImage { %log; %orig; }
+- (void)pausePreloadImage { %log; %orig; }
+- (_Bool)checkInvalidAdData { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)increaseWCAdvertiseDataExposureCnt:(id)arg1 { %log; %orig; }
+- (void)SetWCAdvertiseDataIgnoreTip:(_Bool)arg1 ignoreCommengMsg:(_Bool)arg2 DataItem:(id)arg3 { %log; %orig; }
+- (void)SetWCAdvertiseDataIgnoreTip:(_Bool)arg1 DataItem:(id)arg2 { %log; %orig; }
+- (void)SpanUnInterestWCAdvertiseReasonListForData:(id)arg1 { %log; %orig; }
+- (void)UnInterestWCAdvertiseData:(id)arg1 { %log; %orig; }
+- (void)SetWCAdvertiseDataExposured:(id)arg1 { %log; %orig; }
+- (_Bool)hasAdvertiseInCache { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)hasAdvertiseData:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)getAdvertiseData:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)MergeWCAdvertiseDataAdInfo:(id)arg1 { %log; %orig; }
+- (void)MergeWCAdvertiseDataComments:(id)arg1 { %log; %orig; }
+- (void)cacheRepeatUrlAfterConfirmWithDocId:(id)arg1 snsOperationWrap:(id)arg2 { %log; %orig; }
+- (void)operateUrlFeed:(int)arg1 dataItem:(id)arg2 { %log; %orig; }
+- (_Bool)isOnRepeatUrlExperiment:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)couldShowRepeatUrlMenuItem:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)getCanvasAdOutsideIconInfo { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)parseSnsCanvasAdOutsideIcon:(id)arg1 { %log; %orig; }
+- (unsigned long long)getLatestReadMessageCreateTime { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (void)timelineListStatusSync { %log; %orig; }
+- (void)handleUnreadMsgListSyncWithCreateTime:(unsigned long long)arg1 { %log; %orig; }
+- (void)restartAllFailUploadFromLocalNotification { %log; %orig; }
+- (id)getDataItemsByIds:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)onWCGroupModMemberReturn:(_Bool)arg1 group:(id)arg2 { %log; %orig; }
+- (void)onWCGroupSetMemberToGroupsReturn:(_Bool)arg1 username:(id)arg2 groupIDs:(id)arg3 { %log; %orig; }
+- (void)onWCGroupRemoveMemberReturn:(_Bool)arg1 group:(id)arg2 { %log; %orig; }
+- (void)onWCGroupAddMemberReturn:(_Bool)arg1 group:(id)arg2 { %log; %orig; }
+- (void)onWCDeleteGroupReturn:(_Bool)arg1 groupID:(id)arg2 { %log; %orig; }
+- (void)onWCChangeGroupNameReturn:(_Bool)arg1 groupID:(id)arg2 { %log; %orig; }
+- (void)onWCCreateGroupReturn:(_Bool)arg1 group:(id)arg2 { %log; %orig; }
+- (void)onWCGroupUpdatedReturn:(_Bool)arg1 { %log; %orig; }
+- (void)onWCGroupRecommendUpdated { %log; %orig; }
+- (void)onWCGroupUpdated { %log; %orig; }
+- (void)setPostPrivacy:(int)arg1 withLabelNames:(id)arg2 { %log; %orig; }
+- (void)setPostPrivacy:(int)arg1 withGroupIDs:(id)arg2 { %log; %orig; }
+- (void)setPostPrivacy:(int)arg1 { %log; %orig; }
+- (id)getLastPostGroups { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (int)getPostPrivacy { %log; int r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)getGroupsWithMember:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)modGroup:(id)arg1 newName:(id)arg2 members:(id)arg3 withScene:(int)arg4 { %log; %orig; }
+- (void)modGroup:(id)arg1 newName:(id)arg2 members:(id)arg3 { %log; %orig; }
+- (void)setMember:(id)arg1 toGroups:(id)arg2 { %log; %orig; }
+- (void)removeMembers:(id)arg1 fromGroup:(id)arg2 withScene:(int)arg3 { %log; %orig; }
+- (void)addMembers:(id)arg1 toGroup:(id)arg2 withScene:(int)arg3 { %log; %orig; }
+- (void)modifyGroupName:(id)arg1 newName:(id)arg2 { %log; %orig; }
+- (void)deleteGroup:(id)arg1 { %log; %orig; }
+- (void)createGroup:(id)arg1 withGroupName:(id)arg2 { %log; %orig; }
+- (void)updateAllRecommends { %log; %orig; }
+- (void)setRecommendReadForGroup:(id)arg1 { %log; %orig; }
+- (id)getUnReadRecommendsForGroup:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getReadRecommendsForGroup:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)localDeleteAllGroups { %log; %orig; }
+- (_Bool)canUpdateAllGroups { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)updateAllGroups { %log; %orig; }
+- (_Bool)isUserInGroup:(id)arg1 GroupID:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)getGroupByID:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getCustomGroups { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getAllGroups { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setShowNewTimelineEventNotification:(_Bool)arg1 { %log; %orig; }
+- (_Bool)isShowNewTimelineEventNotification { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isNetworkActive { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)endNetworkActivity:(long long)arg1 cgi:(long long)arg2 { %log; %orig; }
+- (void)beginNetworkActivity:(long long)arg1 cgi:(long long)arg2 { %log; %orig; }
+- (id)networkEventDic { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)exposeDataItem:(id)arg1 { %log; %orig; }
+- (void)updateDataItemDetail:(id)arg1 { %log; %orig; }
+- (void)updateDataItemDetailWithGroupDetail:(id)arg1 { %log; %orig; }
+- (void)updateDataItemDetailByItem:(id)arg1 { %log; %orig; }
+- (void)setDataItemHate:(id)arg1 { %log; %orig; }
+- (void)setDataItemPublic:(id)arg1 { %log; %orig; }
+- (void)setDataItemPrivate:(id)arg1 { %log; %orig; }
+- (void)onSetWCMessageNotifyFinished:(int)arg1 dataItemID:(id)arg2 opFlag:(_Bool)arg3 { %log; %orig; }
+- (void)onAdvertiseItemDeleted:(id)arg1 { %log; %orig; }
+- (void)onSetDataItemPublicFinished:(int)arg1 dataItemID:(id)arg2 { %log; %orig; }
+- (void)onSetDataItemPrivateFinished:(int)arg1 dataItemID:(id)arg2 { %log; %orig; }
+- (void)onCommentItemDeleteFinished:(int)arg1 commentItemID:(id)arg2 dataItemID:(id)arg3 { %log; %orig; }
+- (void)onDataItemDeleteFinished:(int)arg1 dataItemID:(id)arg2 { %log; %orig; }
+- (void)onDataItemExposeFinisehd:(int)arg1 dataItem:(id)arg2 { %log; %orig; }
+- (void)onUpdateDataItemDetailFinisehd:(int)arg1 dataItem:(id)arg2 { %log; %orig; }
+- (void)deleteMessage:(id)arg1 { %log; %orig; }
+- (void)deleteAllMessages { %log; %orig; }
+- (void)markMessageAllReadWithSyncMessage:(id)arg1 { %log; %orig; }
+- (void)markMessageListRead:(id)arg1 { %log; %orig; }
+- (void)markMessageRead:(id)arg1 { %log; %orig; }
+- (id)getMessageFrom:(id)arg1 maxCount:(unsigned int)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getAllMessages { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getUnReadMessagesLimit:(int)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getUnReadMessages { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getLatestReadMessage { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getLastUnReadMessage { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned int)getUnReadMessageCount { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (void)onMessageUnReadCountChanged { %log; %orig; }
+- (void)onReveiceStrangerMessage:(id)arg1 { %log; %orig; }
+- (void)onReveiceWCMessages:(id)arg1 { %log; %orig; }
+- (void)onLatestWCObjectChanged:(id)arg1 { %log; %orig; }
+- (void)onAdvertiseCommentReturn:(id)arg1 { %log; %orig; }
+- (void)clickDelayShowFeed:(id)arg1 { %log; %orig; }
+- (void)exposureDelayShowFeed:(id)arg1 { %log; %orig; }
+- (_Bool)hitTheDelayShowExp:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)couldRunSightPreload:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)onCommentReturn:(id)arg1 { %log; %orig; }
+- (void)commentObject:(id)arg1 toStranger:(id)arg2 content:(id)arg3 ref:(id)arg4 source:(long long)arg5 { %log; %orig; }
+- (void)likeObjectByID:(id)arg1 toStranger:(id)arg2 source:(long long)arg3 { %log; %orig; }
+- (_Bool)unCommentObject:(id)arg1 ofUser:(id)arg2 comment:(id)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)unLikeObject:(id)arg1 ofUser:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)commentObject:(id)arg1 ofUser:(id)arg2 content:(id)arg3 ref:(id)arg4 source:(long long)arg5 isActionAtAd:(_Bool)arg6 { %log; %orig; }
+- (void)commentObject:(id)arg1 ofUser:(id)arg2 content:(id)arg3 ref:(id)arg4 source:(long long)arg5 { %log; %orig; }
+- (void)likeObjectByID:(id)arg1 ofUser:(id)arg2 source:(long long)arg3 { %log; %orig; }
+- (void)likeObject:(id)arg1 ofUser:(id)arg2 source:(long long)arg3 { %log; %orig; }
+- (void)NotifyBackgroundChanged { %log; %orig; }
+- (id)getUploadingDataItems { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)NotifyToDownloadMedia:(id)arg1 downloadType:(long long)arg2 { %log; %orig; }
+- (void)NotifyToUploadWithTask:(id)arg1 { %log; %orig; }
+- (void)onBGStorageUpdated { %log; %orig; }
+- (void)updateBGStorage { %log; %orig; }
+- (id)getBGStorage { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setBGImgLikedForUser:(id)arg1 source:(long long)arg2 { %log; %orig; }
+- (_Bool)isBGImgLikedForUser:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)hasBGImg:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)SetBGImgByImg:(id)arg1 { %log; %orig; }
+- (void)SetBGImgByMedia:(id)arg1 { %log; %orig; }
+- (id)backgroundImageByContact:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)onAddDownloadQueue:(id)arg1 downloadType:(int)arg2 { %log; %orig; }
+- (void)onBeginDownload:(id)arg1 downloadType:(int)arg2 { %log; %orig; }
+- (void)onCancelDownloadSuccess:(id)arg1 downloadType:(int)arg2 { %log; %orig; }
+- (void)onDownloadFinish:(id)arg1 downloadType:(int)arg2 { %log; %orig; }
+- (void)onDownloadMediaProcessChange:(id)arg1 downloadType:(int)arg2 current:(int)arg3 total:(int)arg4 { %log; %orig; }
+- (void)updateDownloadConcurrentCount { %log; %orig; }
+- (void)cancelDownloadMedia:(id)arg1 downloadType:(int)arg2 { %log; %orig; }
+- (void)forceDownloadMediaWithProcessNotify:(id)arg1 downloadType:(int)arg2 { %log; %orig; }
+- (void)forceDownloadMedia:(id)arg1 downloadType:(int)arg2 { %log; %orig; }
+- (void)downloadMediaWithProcessNotify:(id)arg1 downloadType:(int)arg2 { %log; %orig; }
+- (void)downloadMedia:(id)arg1 downloadType:(int)arg2 { %log; %orig; }
+- (void)pullDownloadMediaToFront:(id)arg1 downloadType:(int)arg2 { %log; %orig; }
+- (void)setDownloadScene:(int)arg1 { %log; %orig; }
+- (unsigned long long)getHomepageLimitFeedId:(id)arg1 { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (long long)getHomepageTotalCount:(id)arg1 { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (void)tryGetWCDataItemPattern:(id)arg1 { %log; %orig; }
+- (id)getStrangerDataItemByID:(id)arg1 ofPartner:(id)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getDataItemByID:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getDataItemByID:(id)arg1 addLocal:(_Bool)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)cleanFailDataItemForSpam:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)onUploadRestarted:(id)arg1 { %log; %orig; }
+- (void)onUploadFailed:(id)arg1 { %log; %orig; }
+- (void)onUploadFinished:(id)arg1 { %log; %orig; }
+- (void)deleteFoldedSight:(id)arg1 { %log; %orig; }
+- (void)addFoldedSight:(id)arg1 { %log; %orig; }
+- (id)getFoldedSight { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)deleteFailedComment:(id)arg1 { %log; %orig; }
+- (id)getFailedLike { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getFailedComment { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getFailedUploads { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)deleteDataItemLocal:(id)arg1 { %log; %orig; }
+- (void)deleteDataItem:(id)arg1 { %log; %orig; }
+- (void)addFailDataItem:(id)arg1 { %log; %orig; }
+- (void)restartUploadDataItem:(id)arg1 { %log; %orig; }
+- (id)uploadDataItem:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getRedEnvelopesInfoByDataItem:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)cacheFreeStatus:(id)arg1 { %log; %orig; }
+- (void)cacheRewardStatus:(id)arg1 { %log; %orig; }
+- (id)getCacheText:(id)arg1 refCommentItem:(id)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)cacheText:(id)arg1 refDataItem:(id)arg2 refCommentItem:(id)arg3 { %log; %orig; }
+- (void)uncacheText:(id)arg1 refCommentItem:(id)arg2 { %log; %orig; }
+- (_Bool)updateTimelineTail { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)updateTimelineHead { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)getLatestDataItem { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)deleteAllTimelineDataItems { %log; %orig; }
+- (id)getTimelineDataInCacheByItemID:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getTimelineDataItemOfIndex:(long long)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (long long)countOfTimelineDataItem { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (void)reloadTimelineDataItems { %log; %orig; }
+- (void)deduplicateTimelineDataItems { %log; %orig; }
+- (unsigned int)getTimelineShowFlag { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (void)endTimeline { %log; %orig; }
+- (void)beginTimeline { %log; %orig; }
+- (void)onRemoveCachesOfContentWithDataItemId:(id)arg1 { %log; %orig; }
+- (void)onRemoveCachesOfLikeUserWithDataItemId:(id)arg1 { %log; %orig; }
+- (void)onTimelineDataChanged:(id)arg1 andAdItems:(id)arg2 { %log; %orig; }
+- (void)onNoMoreTimelineData { %log; %orig; }
+- (void)onTimelineDataChangedWithAdded:(id)arg1 andChanged:(id)arg2 andDeleted:(id)arg3 { %log; %orig; }
+- (void)onHomepage:(id)arg1 BGImgChanged:(id)arg2 { %log; %orig; }
+- (void)onHomepage:(id)arg1 totalCountChanged:(long long)arg2 { %log; %orig; }
+- (void)onHomepage:(id)arg1 limitFeedIdChanged:(unsigned long long)arg2 { %log; %orig; }
+- (void)onHomepageUpdate:(int)arg1 username:(id)arg2 withAdded:(id)arg3 andChanged:(id)arg4 andDeleted:(id)arg5 { %log; %orig; }
+- (id)getHomepageData:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getCurrentUserHomepage { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)innerGetHomepage:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)updateHomePageTail:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)updateHomePageHead:(id)arg1 source:(long long)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)updateHomePageHead:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)endHomepage:(id)arg1 { %log; %orig; }
+- (void)beginHomepage:(id)arg1 { %log; %orig; }
+- (id)GetRecommendUsr { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)isValidRecommendUsr:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)findDataItemInCacheByItemID:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)modifyDataItem:(id)arg1 notify:(_Bool)arg2 { %log; %orig; }
+- (_Bool)LL_onBeforeReturnDataItem:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isShowThumbForType:(long long)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isDataItemDeleted:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)markDataItemDeleted:(id)arg1 { %log; %orig; }
+- (id)deletedItemSet { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)downloadCDNMgr { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)snsLocalCacheMgr { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)snsABTestMgr { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)inputTextCacheMgr { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)patternCacheMgr { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)canvasTypeMgr { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)groupMgr { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)bgMaster { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)preloadLogic { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)bgImgLogic { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)homepageMgr:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)advertiseLogicMgr { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)logicMgr { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)strangerCommentMgrWithDB { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)messageMgrWithDB { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)timeLineTipsMgr { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)commentMgr { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)uploadMgr { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)timelineMgr { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)downloadImageCdnMgr { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)downloadMgr { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)adDataHelper { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)database { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)onServiceMemoryWarning { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)onServiceTerminate { %log; %orig; }
+- (void)onServiceEnterForeground { %log; %orig; }
+- (void)onServiceEnterBackground { %log; %orig; }
+- (void)onServiceReloadData { %log; %orig; }
+- (void)reloadDatabase { %log; %orig; }
+- (void)dealloc { %log; %orig; }
+- (void)onServiceClearData { %log; %orig; }
+- (void)onServiceInit { %log; %orig; }
+- (id)init { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)addAutoCleanTask { %log; %orig; }
+- (id)getTimeLineWebViewExtraInfo:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)reportBrowseInfo { %log; %orig; }
+- (void)logUserAction:(int)arg1 onScene:(int)arg2 forFeed:(id)arg3 { %log; %orig; }
+- (void)onAdForwardCanvasViewStateChange:(int)arg1 { %log; %orig; }
+- (void)onAdCanvasViewStateChange:(int)arg1 { %log; %orig; }
+- (void)onAdLongVideoViewStateChange:(int)arg1 { %log; %orig; }
+- (void)onAdForwardSteamVideoStateChange:(int)arg1 { %log; %orig; }
+- (void)onAdFullScreenSightStateChange:(int)arg1 { %log; %orig; }
+- (void)onAdDetailPageStateChange:(int)arg1 { %log; %orig; }
+- (void)onAdFullScreenImageViewStateChange:(int)arg1 { %log; %orig; }
+- (void)onPOIDetailForDataItem:(id)arg1 StateChange:(int)arg2 { %log; %orig; }
+- (void)onExternalArticleViewStateChange:(int)arg1 { %log; %orig; }
+- (void)onMPArticleViewStateChange:(int)arg1 { %log; %orig; }
+- (void)onWebViewForURL:(id)arg1 Ad:(_Bool)arg2 StreamVideo:(_Bool)arg3 StateChange:(int)arg4 { %log; %orig; }
+- (void)onFullScreenSightViewStateChange:(int)arg1 { %log; %orig; }
+- (void)onFullScreenImageViewStateChange:(int)arg1 { %log; %orig; }
+- (void)onNewPostViewStateChange:(int)arg1 { %log; %orig; }
+- (void)onMessageListViewStateChange:(int)arg1 { %log; %orig; }
+- (void)onAlbumViewForOthersStateChange:(int)arg1 { %log; %orig; }
+- (void)onAlbumViewForMySelfStateChange:(int)arg1 { %log; %orig; }
+- (void)onTimeLineViewStateChange:(int)arg1 { %log; %orig; }
+- (id)getBrowseInfo { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)WCFacadeBrowseInfoReportOnForeground { %log; %orig; }
+- (void)WCFacadeBrowseInfoReportOnBackground { %log; %orig; }
+- (void)WCFacadeBrowseInfoReportOnTerminate { %log; %orig; }
+- (void)WCFacadeBrowseInfoReportOnUnRegisterExt { %log; %orig; }
+- (void)WCFacadeBrowseInfoReportOnRegisterExt { %log; %orig; }
+- (void)setSwitchInfo:(int )switchInfo { %log; %orig; }
+- (int )switchInfo { %log; int  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)onModifyContact:(id)arg1 { %log; %orig; }
+- (void)removeCachesByContact:(id)arg1 { %log; %orig; }
+- (void)removeCachesOfContentWithUserComment:(id)arg1 { %log; %orig; }
+- (void)setLayoutStylesOfContent:(id)arg1 withUserComment:(id)arg2 width:(double)arg3 { %log; %orig; }
+- (id)layoutStylesOfContentWithUserComment:(id)arg1 width:(double)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)removeContentHeightForWidth:(double)arg1 withDataItem:(id)arg2 { %log; %orig; }
+- (void)setContentHeight:(double)arg1 forWidth:(double)arg2 withUserComment:(id)arg3 { %log; %orig; }
+- (double)contentHeightForWidth:(double)arg1 withUserComment:(id)arg2 { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (void)removeCachesOfContentWithDataItemId:(id)arg1 { %log; %orig; }
+- (void)removeCachesOfLikeUserWithDataItemId:(id)arg1 { %log; %orig; }
+- (void)setLayoutStylesOfLikeUser:(id)arg1 withDataItem:(id)arg2 width:(double)arg3 { %log; %orig; }
+- (id)layoutStylesOfLikeUserWithDataItem:(id)arg1 width:(double)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setlikeUserHeight:(double)arg1 forWidth:(double)arg2 withDataItem:(id)arg3 { %log; %orig; }
+- (double)likeUserHeightForWidth:(double)arg1 withDataItem:(id)arg2 { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (void)setLayoutStylesOfContentDesc:(id)arg1 withDataItem:(id)arg2 width:(double)arg3 isShowDetail:(_Bool)arg4 scene:(int)arg5 { %log; %orig; }
+- (id)layoutStylesOfContentDescWithDataItem:(id)arg1 width:(double)arg2 isShowDetail:(_Bool)arg3 scene:(int)arg4 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)removeContentDescHeightForWidth:(double)arg1 withDataItem:(id)arg2 { %log; %orig; }
+- (void)setContentDescHeight:(double)arg1 forWidth:(double)arg2 withDataItem:(id)arg3 { %log; %orig; }
+- (double)contentDescHeightForWidth:(double)arg1 withDataItem:(id)arg2 { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (id)getTipData:(id)arg1 layerId:(id)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)hiddenTip:(id)arg1 dataItem:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)hitActionListShowTip:(id)arg1 layerId:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isFirstTip:(id)arg1 layerId:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)getShowTip:(id)arg1 layerId:(id)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getLayerIdForDataItem:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)replaceTipData:(id)arg1 dataItem:(id)arg2 layerId:(id)arg3 { %log; %orig; }
+- (void)removeTipData:(id)arg1 layerId:(id)arg2 { %log; %orig; }
+- (void)setDataItem:(id)arg1 showDetail:(_Bool)arg2 { %log; %orig; }
+- (_Bool)isDataItemShowDetail:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (unsigned int)getMaxCacheLogCount { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (unsigned int)getMaxCacheTime { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (_Bool)needUploadData { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)exposurStatExitTimeLine { %log; %orig; }
+- (void)reportData { %log; %orig; }
+- (void)tryReportData { %log; %orig; }
+- (void)recordFeedExposureWithFeedId:(id)arg1 { %log; %orig; }
+- (_Bool)hadExposuredWithFeedId:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)getExposureFeedIdDic { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)saveExposureFeedIdDic { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)pathForExposureDicCache { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)LLDelete_onAfterDeleteDataItemFinished:(id)arg1 { %log; %orig; }
+- (void)LLDelete_onBeforeDeleteDataItem:(id)arg1 { %log; %orig; }
+- (void)notifyTotalCountWhenDataItemDeleted:(id)arg1 { %log; %orig; }
+- (void)LLComment_onBeforeReturnUnLikeDataItem:(id)arg1 { %log; %orig; }
+- (void)LLComment_onBeforeReturnUnCommentDataItem:(id)arg1 comment:(id)arg2 { %log; %orig; }
+- (void)LLComment_onBeforeReturnStrangerDataItem:(id)arg1 partner:(id)arg2 { %log; %orig; }
+- (void)LLComment_onBeforeReturnDataItem:(id)arg1 { %log; %orig; }
+- (void)LLUpload_onAfterUploadTaskRestarted:(id)arg1 { %log; %orig; }
+- (void)LLUpload_onAfterUploadTaskFailed:(id)arg1 { %log; %orig; }
+- (void)LLUpload_onAfterUploadTaskFinished:(id)arg1 { %log; %orig; }
+- (void)LLUpload_onAfterAddUploadTask:(id)arg1 { %log; %orig; }
+- (void)LLUpload_onBeforeAddUploadTask:(id)arg1 { %log; %orig; }
+- (void)logSnsSightClick:(id)arg1 sightVideoExist:(_Bool)arg2 autoPlay:(_Bool)arg3 { %log; %orig; }
+- (void)tryLogABTestResultTime:(id)arg1 dataItemId:(id)arg2 startTime:(_Bool)arg3 endTime:(_Bool)arg4 { %log; %orig; }
+- (void)logABTestResult:(id)arg1 dataItemId:(id)arg2 tipActionResult:(id)arg3 { %log; %orig; }
+- (void)tryReportABTestResult { %log; %orig; }
+- (void)removeSucPreloadInfoForItemId:(id)arg1 { %log; %orig; }
+- (void)addFirstClickDataItemForPreloadBigImage:(id)arg1 { %log; %orig; }
+- (void)removeFirstClickDataItemForPreloadBigImage:(id)arg1 { %log; %orig; }
+- (_Bool)hasFirstClickDataItemForPreloadBigImage:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)onClickPostButtonForStat:(_Bool)arg1 contentType:(unsigned int)arg2 { %log; %orig; }
+- (void)onClickCameraButtonForStat { %log; %orig; }
+- (void)removePreloadItemForBigImage:(id)arg1 { %log; %orig; }
+- (void)tryLogPreloadImageResult { %log; %orig; }
+- (void)removeItemForBigImageLoadedEfficency:(id)arg1 { %log; %orig; }
+- (void)tryLogPreloadSucForBigImageLoadedEfficency:(id)arg1 { %log; %orig; }
+- (void)tryLogBigImageLoadedEfficency:(id)arg1 loadedResult:(unsigned int)arg2 costTime:(unsigned int)arg3 { %log; %orig; }
+- (_Bool)shouldLogBigImageLoadedEfficency:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)tryLogPreloadSucForSmallImageLoadedEfficency:(id)arg1 { %log; %orig; }
+- (void)tryLogSmallImageLoadedEfficency:(id)arg1 loadedResult:(unsigned int)arg2 costTime:(unsigned int)arg3 loadedCount:(unsigned int)arg4 { %log; %orig; }
+- (_Bool)shouldLogSmallImageLoadedEfficency:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)removeItemForClickBigImage:(id)arg1 { %log; %orig; }
+- (void)tryLogClickBigImage:(id)arg1 clickIndex:(unsigned int)arg2 clickCount:(unsigned int)arg3 downloadCount:(unsigned int)arg4 scanIndexArrayStr:(id)arg5 scaleOutIndexArrayStr:(id)arg6 scaleInIndexArrayStr:(id)arg7 { %log; %orig; }
+- (void)logPreviewBigImageCount:(unsigned int)arg1 totalCount:(unsigned int)arg2 { %log; %orig; }
+- (void)logSimpleScreenShot { %log; %orig; }
+- (void)logAdContext:(id)arg1 adPreFeedList:(id)arg2 adNextFeedList:(id)arg3 { %log; %orig; }
+- (void)logEndScreenShot:(unsigned long long)arg1 { %log; %orig; }
+- (void)logOtherContentPostiont:(id)arg1 frame:(struct CGRect)arg2 timeStamp:(unsigned long long)arg3 { %log; %orig; }
+- (void)logFeedCommentPosition:(id)arg1 comment:(id)arg2 frame:(struct CGRect)arg3 timeStamp:(unsigned long long)arg4 { %log; %orig; }
+- (void)logFeedLikeListPosition:(id)arg1 frame:(struct CGRect)arg2 timeStamp:(unsigned long long)arg3 { %log; %orig; }
+- (void)logFeedContentPosition:(id)arg1 frame:(struct CGRect)arg2 timeStamp:(unsigned long long)arg3 { %log; %orig; }
+- (void)logStartScreenShot:(double)arg1 topBarHeight:(double)arg2 screenWidth:(double)arg3 screenHeight:(double)arg4 visibleTopOffset:(double)arg5 visibleBottomOffset:(double)arg6 timeStamp:(unsigned long long)arg7 { %log; %orig; }
+- (void)logDataListChanged:(unsigned int)arg1 startFeed:(id)arg2 endFeed:(id)arg3 { %log; %orig; }
+- (id)asyncLogOpInfoForForwardAttachVideo:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)asyncLogEndViewAlbum:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)logEndViewSight:(id)arg1 { %log; %orig; }
+- (void)logEndViewBigImage:(id)arg1 downloadedPictureCount:(unsigned int)arg2 { %log; %orig; }
+- (id)asyncLogEndViewUrl:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)logStartRefCommentFeed:(id)arg1 refComment:(id)arg2 { %log; %orig; }
+- (void)logStartCommentFeed:(id)arg1 { %log; %orig; }
+- (void)logShowFloatView:(id)arg1 { %log; %orig; }
+- (void)logDeleteFeed:(id)arg1 { %log; %orig; }
+- (void)logClickToPlayMusic:(id)arg1 musicInfo:(id)arg2 { %log; %orig; }
+- (void)logRefreshNextPage:(unsigned int)arg1 hasEnoughLocalData:(_Bool)arg2 { %log; %orig; }
+- (void)logRefreshHead:(unsigned int)arg1 { %log; %orig; }
+- (void)logClickFailFeed:(id)arg1 index:(unsigned int)arg2 failCount:(unsigned int)arg3 { %log; %orig; }
+- (void)logClickUnreadMessage:(unsigned int)arg1 { %log; %orig; }
+- (void)logClickAdPoiInfo:(id)arg1 { %log; %orig; }
+- (void)logClickPoiInfo:(id)arg1 { %log; %orig; }
+- (void)logChangeAlbumBkgImage:(id)arg1 { %log; %orig; }
+- (void)logClickHeadImageToProfile:(id)arg1 userName:(id)arg2 { %log; %orig; }
+- (void)logClickHeadImageToAlbum:(id)arg1 userName:(id)arg2 { %log; %orig; }
+- (void)logClickNickNameToProfile:(id)arg1 userName:(id)arg2 { %log; %orig; }
+- (void)logClickNickNameToAlbum:(id)arg1 userName:(id)arg2 { %log; %orig; }
+- (void)logClickToViewUrl:(id)arg1 { %log; %orig; }
+- (void)logClickToViewSight:(id)arg1 mediaId:(id)arg2 { %log; %orig; }
+- (void)logClickToViewBigImage:(id)arg1 mediaId:(id)arg2 pictureIndex:(int)arg3 { %log; %orig; }
+- (void)logTranslateFeedComment:(id)arg1 comment:(id)arg2 { %log; %orig; }
+- (void)logTranslateFeedContent:(id)arg1 { %log; %orig; }
+- (void)logExposeFeed:(id)arg1 reason:(id)arg2 { %log; %orig; }
+- (id)asyncLogFavFeed:(id)arg1 url:(id)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)asyncLogForwardToFriend:(id)arg1 friendName:(id)arg2 url:(id)arg3 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)asyncLogForwardToGroup:(id)arg1 groupName:(id)arg2 url:(id)arg3 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)logRefCommentFeed:(id)arg1 refComment:(id)arg2 { %log; %orig; }
+- (void)logCommentFeed:(id)arg1 { %log; %orig; }
+- (void)logLikeFeed:(id)arg1 { %log; %orig; }
+- (id)asyncLogOpInfoForForwardPostFeed:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)asyncLogOpInfoForNormalPostFeed { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)logExitTimeline:(_Bool)arg1 hasNewFeedInServer:(_Bool)arg2 startReadId:(id)arg3 endReadId:(id)arg4 waitLoadedFeedId:(id)arg5 browseFeedCount:(unsigned int)arg6 browseNewFeedCount:(unsigned int)arg7 { %log; %orig; }
+- (void)logEnterTimeline:(_Bool)arg1 unreadMessageCount:(unsigned int)arg2 { %log; %orig; }
+- (NSString *)debugDescription { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)description { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long )hash { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (Class )superclass { %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end

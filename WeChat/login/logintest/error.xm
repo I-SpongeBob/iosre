@@ -1,0 +1,37 @@
+%hook WCAccountNewPhoneVerifyViewController
+//- (void).cxx_destruct { %log; %orig; }
+- (void)WCBaseInfoItemEditChanged:(id)arg1 { %log; %orig; }
+- (void)actionSheet:(id)arg1 clickedButtonAtIndex:(long long)arg2 { %log; %orig; }
+- (void)setBShowPwdViewFirst:(_Bool )bShowPwdViewFirst { %log; %orig; }
+- (_Bool )bShowPwdViewFirst { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)checkNextBtnEnable { %log; %orig; }
+- (void)dealloc { %log; %orig; }
+- (void)didReceiveMemoryWarning { %log; %orig; }
+- (void)setICount:(long long )iCount { %log; %orig; }
+- (long long )iCount { %log; long long  r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (id)init { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)initNavigationBar { %log; %orig; }
+- (void)initView { %log; %orig; }
+- (void)onNext { %log; %orig; }
+- (void)onResendClicked { %log; %orig; }
+- (void)onSwitch { %log; %orig; }
+- (void)setDelegate:(id)arg1 { %log; %orig; }
+- (void)setupWithData:(id)arg1 { %log; %orig; }
+- (void)showFooterViewWithSwitchBtnTitle:(id)arg1 loginBtnTitle:(id)arg2 { %log; %orig; }
+- (void)showPhoneVerifyFooterView { %log; %orig; }
+- (void)showPwdFooterView { %log; %orig; }
+- (void)startTimer { %log; %orig; }
+- (void)switchToPwdLogin { %log; %orig; }
+- (void)switchToVerifyLogin { %log; %orig; }
+- (void)updateSendVerifyCodeButton { %log; %orig; }
+- (_Bool)useGrayBackgroundColor { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)userDidClickBack { %log; %orig; }
+- (void)userDidClickMore { %log; %orig; }
+- (void)vcResignFirstResponder { %log; %orig; }
+- (void)viewDidBePoped:(_Bool)arg1 { %log; %orig; }
+- (void)viewDidLoad { %log; %orig; }
+- (NSString *)debugDescription { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)description { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long )hash { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (Class )superclass { %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end

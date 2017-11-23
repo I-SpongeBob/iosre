@@ -1,0 +1,110 @@
+%hook ChatRoomInfoViewController
+- (void)setM_searchScene:(int )m_searchScene { %log; %orig; }
+- (int )m_searchScene { %log; int  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_bIsShowAnnouncementSectionIndexAtFirst:(_Bool )m_bIsShowAnnouncementSectionIndexAtFirst { %log; %orig; }
+- (_Bool )m_bIsShowAnnouncementSectionIndexAtFirst { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_bIsShowNickNameSectionIndexAtFirst:(_Bool )m_bIsShowNickNameSectionIndexAtFirst { %log; %orig; }
+- (_Bool )m_bIsShowNickNameSectionIndexAtFirst { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_bIsShowNotificationSectionIndexAtFirst:(_Bool )m_bIsShowNotificationSectionIndexAtFirst { %log; %orig; }
+- (_Bool )m_bIsShowNotificationSectionIndexAtFirst { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_bFromAddressBook:(_Bool )m_bFromAddressBook { %log; %orig; }
+- (_Bool )m_bFromAddressBook { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_muteButton:(UIButton *)m_muteButton { %log; %orig; }
+- (UIButton *)m_muteButton { %log; UIButton * r = %orig; HBLogDebug(@" = %@", r); return r; }
+//- (void)setM_delegate:(__weak id <chatRoomInfoDelegate><chatRoomSettingDelegate> )m_delegate { %log; %orig; }
+//- (__weak id <chatRoomInfoDelegate><chatRoomSettingDelegate> )m_delegate { %log; __weak id <chatRoomInfoDelegate><chatRoomSettingDelegate>  r = %orig; HBLogDebug(@" = 0x%x", (unsigned int)r); return r; }
+//- (void)setM_chatRoomContact:(CContact *)m_chatRoomContact { %log; %orig; }
+//- (CContact *)m_chatRoomContact { %log; CContact * r = %orig; HBLogDebug(@" = %@", r); return r; }
+//- (void).cxx_destruct { %log; %orig; }
+- (void)changeSetting { %log; %orig; }
+- (void)onDeleteContact:(id)arg1 { %log; %orig; }
+- (void)onModifyContact:(id)arg1 { %log; %orig; }
+- (void)processModContact:(id)arg1 { %log; %orig; }
+- (void)onArriveFundConfirmDeleteSession:(id)arg1 { %log; %orig; }
+- (void)onArriveFundCancelDeleteSession:(id)arg1 { %log; %orig; }
+- (void)confirmOnArriveFund:(long long)arg1 { %log; %orig; }
+- (void)actionSheet:(id)arg1 clickedButtonAtIndex:(long long)arg2 { %log; %orig; }
+- (void)alertView:(id)arg1 clickedButtonAtIndex:(long long)arg2 { %log; %orig; }
+- (_Bool)quitChatRoom { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)canShowUpgradeStatus { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)newMessageFromContactInfo:(id)arg1 { %log; %orig; }
+- (void)addToContactsFromContactInfo:(id)arg1 { %log; %orig; }
+- (void)setShowDisplayName:(id)arg1 { %log; %orig; }
+- (void)showSetRoomDisplayName { %log; %orig; }
+- (void)oplogRet:(int)arg1 errMsg:(id)arg2 eventID:(unsigned int)arg3 cgiWrap:(id)arg4 { %log; %orig; }
+- (void)setChatRoomDisplayName:(id)arg1 vc:(id)arg2 { %log; %orig; }
+- (id)getDisplayName { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)showMoreMember { %log; %orig; }
+- (void)setShowRemoveMember { %log; %orig; }
+- (void)onDeleteMember:(id)arg1 { %log; %orig; }
+- (void)onAddMemLogicStop:(_Bool)arg1 { %log; %orig; }
+- (void)addMember { %log; %orig; }
+- (void)onViewMemLogicStop:(_Bool)arg1 { %log; %orig; }
+- (void)showMoreMemberEx { %log; %orig; }
+- (void)onDelMemLogicStop:(_Bool)arg1 { %log; %orig; }
+- (void)showDelMemView { %log; %orig; }
+- (void)openContactInfo:(id)arg1 { %log; %orig; }
+- (void)onEnterChat { %log; %orig; }
+- (void)dealloc { %log; %orig; }
+- (id)init { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)viewWillDisappear:(_Bool)arg1 { %log; %orig; }
+- (void)viewDidAppear:(_Bool)arg1 { %log; %orig; }
+- (void)viewDidLoad { %log; %orig; }
+- (void)viewDidLayoutSubviews { %log; %orig; }
+- (void)reloadMemberListAndView { %log; %orig; }
+- (void)removeCoverView { %log; %orig; }
+- (void)hideCoverView { %log; %orig; }
+- (void)startCoverAnimOnIndexPath:(id)arg1 { %log; %orig; }
+- (void)initView { %log; %orig; }
+- (void)doReset { %log; %orig; }
+- (void)updateMemberView { %log; %orig; }
+- (void)initFooterView { %log; %orig; }
+- (void)setTopSession:(id)arg1 { %log; %orig; }
+- (void)onEditAndSearch { %log; %orig; }
+- (void)onQuit:(id)arg1 { %log; %orig; }
+- (void)showWeAppMsg { %log; %orig; }
+- (void)makeWeAppMsgListCell:(id)arg1 cellInfo:(id)arg2 { %log; %orig; }
+- (void)onWAMsgDataLogicLoadOK { %log; %orig; }
+- (void)initWeAppMsgDataLogic { %log; %orig; }
+- (void)initWeAppFastBrowserView { %log; %orig; }
+- (void)onQRCodeView { %log; %orig; }
+- (void)makeQRInfoCell:(id)arg1 cellInfo:(id)arg2 { %log; %orig; }
+- (void)showAdminViewName { %log; %orig; }
+- (void)showGroupManage { %log; %orig; }
+- (void)showAdminViewDesc { %log; %orig; }
+- (void)initData { %log; %orig; }
+- (id)makeEnterBtn { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)reloadTableData { %log; %orig; }
+- (void)reloadProfileTableData { %log; %orig; }
+- (void)makeDescCell:(id)arg1 cellInfo:(id)arg2 { %log; %orig; }
+- (_Bool)shouldOpenNewLineAtY:(double)arg1 withLineHeight:(double)arg2 richTextView:(id)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)makeDescView { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)makeMemListSection:(id)arg1 { %log; %orig; }
+- (void)makeWhiteCell:(id)arg1 CellInfo:(id)arg2 { %log; %orig; }
+- (void)makeMemListCell:(id)arg1 CellInfo:(id)arg2 { %log; %orig; }
+- (void)makeViewMoreBtnCell:(id)arg1 CellInfo:(id)arg2 { %log; %orig; }
+- (void)updateToNormalStatusEx { %log; %orig; }
+- (void)loadMemberList { %log; %orig; }
+- (void)resortMemList { %log; %orig; }
+- (void)initTitleView { %log; %orig; }
+- (void)updateTitleView { %log; %orig; }
+- (_Bool)isTopSessionCountExceed { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)onTopSession:(_Bool)arg1 { %log; %orig; }
+- (_Bool)getSessionTopped { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)OnSetChatRoomTopic:(id)arg1 ErrorInfo:(id)arg2 Success:(_Bool)arg3 { %log; %orig; }
+- (void)OnChangeMemberDisplayName:(id)arg1 { %log; %orig; }
+- (void)checkNeedReload:(id)arg1 { %log; %orig; }
+- (void)OnChangeGroup:(id)arg1 { %log; %orig; }
+- (void)onExpose { %log; %orig; }
+- (void)toggleWatchContact:(id)arg1 { %log; %orig; }
+- (void)switchSaveToAddressBook:(id)arg1 { %log; %orig; }
+- (void)onClear:(id)arg1 { %log; %orig; }
+- (void)showChatBackgroundConfig { %log; %orig; }
+- (void)setMuteStatus:(id)arg1 { %log; %orig; }
+- (_Bool)setUpdateNotifyMuted:(_Bool)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)OnDelGroupMember:(id)arg1 withResult:(unsigned int)arg2 memberList:(id)arg3 errTip:(id)arg4 { %log; %orig; }
+- (NSString *)debugDescription { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)description { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long )hash { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (Class )superclass { %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end

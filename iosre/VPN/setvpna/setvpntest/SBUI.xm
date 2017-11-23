@@ -1,0 +1,208 @@
+%hook SBIconController
++ (id)sharedInstance { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setHasRestrictedEnforcedLayout:(_Bool )hasRestrictedEnforcedLayout { %log; %orig; }
+- (_Bool )hasRestrictedEnforcedLayout { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+//- (void)setLegibilitySettings:(_UILegibilitySettings *)legibilitySettings { %log; %orig; }
+//- (_UILegibilitySettings *)legibilitySettings { %log; _UILegibilitySettings * r = %orig; HBLogDebug(@" = %@", r); return r; }
+//- (void)setPresentedShortcutMenu:(SBApplicationShortcutMenu *)presentedShortcutMenu { %log; %orig; }
+//- (SBApplicationShortcutMenu *)presentedShortcutMenu { %log; SBApplicationShortcutMenu * r = %orig; HBLogDebug(@" = %@", r); return r; }
+//- (void).cxx_destruct { %log; %orig; }
+- (void)applicationShortcutMenu:(id)arg1 launchApplicationWithIconView:(id)arg2 { %log; %orig; }
+- (void)applicationShortcutMenu:(id)arg1 startEditingForIconView:(id)arg2 { %log; %orig; }
+- (void)applicationShortcutMenuDidDismiss:(id)arg1 { %log; %orig; }
+- (void)applicationShortcutMenuDidPresent:(id)arg1 { %log; %orig; }
+- (void)applicationShortcutMenu:(id)arg1 activateShortcutItem:(id)arg2 index:(long long)arg3 { %log; %orig; }
+- (id)_aggregateLoggingAppKeyForShortcutMenu:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)_cleanupForDismissingShortcutMenu:(id)arg1 { %log; %orig; }
+//- (void)_dismissShortcutMenuAnimated:(_Bool)arg1 completionHandler:(CDUnknownBlockType)arg2 { %log; %orig; }
+//- (void)dismissShortcutMenuWithCompletionHandler:(CDUnknownBlockType)arg1 { %log; %orig; }
+- (void)_revealMenuForIconView:(id)arg1 { %log; %orig; }
+- (void)_handleShortcutMenuPeek:(id)arg1 { %log; %orig; }
+- (_Bool)_canRevealShortcutMenu { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)handleReachabilityModeDeactivated { %log; %orig; }
+- (void)handleReachabilityModeActivated { %log; %orig; }
+- (_Bool)_shouldCancelFailedReachability { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)_shouldRespondToReachability { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)_performReachabilityTransactionForActivate:(_Bool)arg1 immediately:(_Bool)arg2 { %log; %orig; }
+- (void)searchGesture:(id)arg1 changedPercentComplete:(double)arg2 { %log; %orig; }
+- (void)folderControllerDidReceiveCancelReachabilityAction:(id)arg1 { %log; %orig; }
+- (void)folderControllerDidEndScrolling:(id)arg1 { %log; %orig; }
+- (void)folderControllerShouldBeginEditing:(id)arg1 { %log; %orig; }
+- (void)folderControllerShouldClose:(id)arg1 { %log; %orig; }
+- (void)folderController:(id)arg1 draggedIconShouldDropFromListView:(id)arg2 { %log; %orig; }
+- (_Bool)folderController:(id)arg1 draggedIconMightDropFromListView:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)folderController:(id)arg1 draggedIconDidMoveFromListView:(id)arg2 toListView:(id)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)folderController:(id)arg1 draggedIconDidPauseAtLocation:(struct CGPoint)arg2 inListView:(id)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (Class)controllerClassForFolder:(id)arg1 { %log; Class r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (Class)_controllerClassForFolderClass:(Class)arg1 { %log; Class r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)_debugStringForIconOrder:(int)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)applicationRestrictionController:(id)arg1 didUpdateVisibleTags:(id)arg2 hiddenTags:(id)arg3 { %log; %orig; }
+- (void)profileConnectionDidReceiveProfileListChangedNotification:(id)arg1 userInfo:(id)arg2 { %log; %orig; }
+- (void)profileConnectionDidReceiveEffectiveSettingsChangedNotification:(id)arg1 userInfo:(id)arg2 { %log; %orig; }
+- (id)firstPageLeafIdentifiers { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)defaultIconState { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)allApplications { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)observer:(id)arg1 noteServerConnectionStateChanged:(_Bool)arg2 { %log; %orig; }
+- (void)observer:(id)arg1 updateSectionInfo:(id)arg2 { %log; %orig; }
+- (void)_updateEnabledBadgesSetWithSections:(id)arg1 { %log; %orig; }
+- (_Bool)_badgesAreEnabledForSectionInfo:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)iconViewDisplaysCloseBox:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)iconViewDisplaysBadges:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)iconAllowsBadging:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)iconCloseBoxTapped:(id)arg1 { %log; %orig; }
+- (_Bool)icon:(id)arg1 canReceiveGrabbedIcon:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)iconTapped:(id)arg1 { %log; %orig; }
+- (_Bool)iconShouldAllowTap:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)icon:(id)arg1 touchMoved:(id)arg2 { %log; %orig; }
+- (void)iconTouchBegan:(id)arg1 { %log; %orig; }
+- (void)icon:(id)arg1 touchEnded:(_Bool)arg2 { %log; %orig; }
+- (void)iconHandleLongPress:(id)arg1 { %log; %orig; }
+- (void)viewMap:(id)arg1 configureIconView:(id)arg2 { %log; %orig; }
+- (int)viewMap:(id)arg1 locationForIcon:(id)arg2 { %log; int r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (unsigned long long)viewMap:(id)arg1 numberOfViewsToPrepareOfClass:(Class)arg2 { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (id)viewMapShouldPrepareViewsOfClasses:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (Class)iconViewClassForIcon:(id)arg1 location:(int)arg2 { %log; Class r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)windowForRecycledViewsInViewMap:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long)viewMap:(id)arg1 maxRecycledViewsOfClass:(Class)arg2 { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (void)didDeleteIconState:(id)arg1 { %log; %orig; }
+- (void)didSaveIconState:(id)arg1 { %log; %orig; }
+- (_Bool)canSaveIconState:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)iconModel:(id)arg1 customInsertionIndexPathForIcon:(id)arg2 inRootFolder:(id)arg3 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)placeholdersByDisplayIDForIconModel:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)iconModel:(id)arg1 applicationWithBundleIdentifier:(id)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)canAddDownloadingIconForApplication:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)canAddWebClip:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)supportsDock { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (unsigned long long)maxColCountForListInRootFolderWithInterfaceOrientation:(long long)arg1 { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (unsigned long long)maxRowCountForListInRootFolderWithInterfaceOrientation:(long long)arg1 { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (unsigned long long)maxIconCountForDock { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (unsigned long long)maxIconCountForListInFolderClass:(Class)arg1 { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (unsigned long long)maxListCountForFolders { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+//- (SBIconViewMap *)homescreenIconViewMap { %log; SBIconViewMap * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)noteIconStateChangedExternally { %log; %orig; }
+- (_Bool)importIconState:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)_selectIconModel:(_Bool)arg1 { %log; %orig; }
+- (void)_installedAppsDidChange:(id)arg1 { %log; %orig; }
+- (void)_iconModelDidLayout:(id)arg1 { %log; %orig; }
+- (void)_iconModelWillLayout:(id)arg1 { %log; %orig; }
+- (void)_iconModelDidReloadIcons:(id)arg1 { %log; %orig; }
+- (void)_iconModelWillReloadIcons:(id)arg1 { %log; %orig; }
+- (_Bool)relayout { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)_dismissRightEdgeSpotlight:(_Bool)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)_presentRightEdgeSpotlight:(_Bool)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)_activateShortcutItem:(id)arg1 fromApplication:(id)arg2 { %log; %orig; }
+- (_Bool)_dismissTopEdgeSpotlight:(_Bool)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)_presentTopEdgeSpotlight:(_Bool)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)_searchViewControllerIsPresented:(_Bool)arg1 fromBreadcrumb:(_Bool)arg2 { %log; %orig; }
+- (_Bool)dismissSpotlightIfNecessary { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)dismissSpotlightAnimated:(_Bool)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)presentSpotlightFromEdge:(unsigned long long)arg1 fromBreadcrumb:(_Bool)arg2 animated:(_Bool)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)_lockScreenUIWillLock:(id)arg1 { %log; %orig; }
+- (void)_noteUserIsInteractingWithIcons { %log; %orig; }
+- (id)visibleIconStateDisplayIdentifiers { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)isIconVisiblyRepresented:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)_iconListIndexIsValid:(long long)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)layoutIconLists:(double)arg1 domino:(_Bool)arg2 forceRelayout:(_Bool)arg3 { %log; %orig; }
+- (void)compactIconsInIconListsInFolder:(id)arg1 moveNow:(_Bool)arg2 limitToIconList:(id)arg3 { %log; %orig; }
+- (void)compactRootIconLists { %log; %orig; }
+- (void)compactFolders:(id)arg1 { %log; %orig; }
+- (void)animationDidStop:(id)arg1 finished:(_Bool)arg2 { %log; %orig; }
+- (void)folderSpringloadTimerFired { %log; %orig; }
+- (void)noteGrabbedIconLocationChangedWithTouch:(id)arg1 { %log; %orig; }
+- (void)_resetFolderSpringloadTimer { %log; %orig; }
+- (void)_cancelFolderSpringloadTimer { %log; %orig; }
+- (id)recipientIcon { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setLastTouchedIcon:(id)arg1 { %log; %orig; }
+- (id)lastTouchedIcon { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setRecipientIcon:(id)arg1 duration:(double)arg2 { %log; %orig; }
+- (id)grabbedIcon { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)_iconDropDidFinish:(id)arg1 { %log; %orig; }
+- (void)setGrabbedIcon:(id)arg1 { %log; %orig; }
+- (void)_dropIcon:(id)arg1 withInsertionPath:(id)arg2 { %log; %orig; }
+- (void)fixupBouncedIconsInFolder:(id)arg1 startingWithIndex:(long long)arg2 { %log; %orig; }
+- (void)setLastTouch:(id)arg1 { %log; %orig; }
+- (void)noteViewCovered { %log; %orig; }
+- (void)restoreScrollingAndRotationAfterUngrab { %log; %orig; }
+- (void)moveIconFromWindow:(id)arg1 toIconList:(id)arg2 { %log; %orig; }
+- (void)_moveIconToContentView:(id)arg1 { %log; %orig; }
+- (void)_keyboardWillHide:(id)arg1 { %log; %orig; }
+- (void)_keyboardWillShow:(id)arg1 { %log; %orig; }
+- (_Bool)isEditingAllowed { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isEditing { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setIsEditing:(_Bool)arg1 { %log; %orig; }
+- (void)iconWasTapped:(id)arg1 { %log; %orig; }
+- (void)clearHighlightedIcon { %log; %orig; }
+- (void)_launchIcon:(id)arg1 { %log; %orig; }
+- (void)removeAllIconAnimations { %log; %orig; }
+- (_Bool)isAnimatingForUnscatter { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+//- (void)unscatterAnimated:(_Bool)arg1 afterDelay:(double)arg2 withCompletion:(CDUnknownBlockType)arg3 { %log; %orig; }
+- (void)setIdleModeText:(id)arg1 { %log; %orig; }
+- (void)updateNumberOfRowsWithDuration:(double)arg1 { %log; %orig; }
+- (void)uninstallIcon:(id)arg1 animate:(_Bool)arg2 { %log; %orig; }
+- (void)uninstallIcon:(id)arg1 { %log; %orig; }
+- (_Bool)isUninstallSupportedForIcon:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)allowsUninstall { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)uninstallIconAnimationCompletedForIcon:(id)arg1 { %log; %orig; }
+- (void)removeIcon:(id)arg1 compactFolder:(_Bool)arg2 { %log; %orig; }
+- (void)removeIcon:(id)arg1 andCompactFolder:(_Bool)arg2 folderRef:(id *)arg3 { %log; %orig; }
+- (id)insertIcon:(id)arg1 intoListView:(id)arg2 iconIndex:(long long)arg3 moveNow:(_Bool)arg4 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)insertIcon:(id)arg1 intoListView:(id)arg2 iconIndex:(long long)arg3 moveNow:(_Bool)arg4 pop:(_Bool)arg5 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)insertIcon:(id)arg1 atIndexPath:(id)arg2 moveNow:(_Bool)arg3 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)insertIcon:(id)arg1 atIndexPath:(id)arg2 moveNow:(_Bool)arg3 pop:(_Bool)arg4 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)placeIcon:(id)arg1 atIndexPath:(id)arg2 moveNow:(_Bool)arg3 layoutNow:(_Bool)arg4 pop:(_Bool)arg5 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)scrollToIconToRevealAnimated:(_Bool)arg1 { %log; %orig; }
+- (void)finishInstallingIconAnimated:(_Bool)arg1 { %log; %orig; }
+- (void)setIconToReveal:(id)arg1 revealingPrevious:(_Bool)arg2 { %log; %orig; }
+- (id)iconToReveal { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)replaceIconAtPath:(id)arg1 withIcon:(id)arg2 saveState:(_Bool)arg3 { %log; %orig; }
+- (void)addNewIconToDesignatedLocation:(id)arg1 animate:(_Bool)arg2 scrollToList:(_Bool)arg3 saveIconState:(_Bool)arg4 { %log; %orig; }
+- (void)addNewIconsToDesignatedLocations:(id)arg1 saveIconState:(_Bool)arg2 { %log; %orig; }
+- (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2 { %log; %orig; }
+- (void)_didRotateFromInterfaceOrientation:(long long)arg1 { %log; %orig; }
+- (void)_willAnimateRotationToInterfaceOrientation:(long long)arg1 duration:(double)arg2 { %log; %orig; }
+- (void)_willRotateToInterfaceOrientation:(long long)arg1 duration:(double)arg2 { %log; %orig; }
+- (void)handleHomeButtonTap { %log; %orig; }
+- (_Bool)scrollToIconListAtIndex:(long long)arg1 animate:(_Bool)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)scrollToIconListContainingIcon:(id)arg1 animate:(_Bool)arg2 { %log; %orig; }
+- (_Bool)_shouldLockItemsInStoreDemoMode { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)_iconCanBeGrabbed:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)dropDestinationIconList { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (long long)dropDestinationIconListIndex { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (id)currentFolderIconList { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)dockListView { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)currentRootIconList { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)resetCurrentVisibleIconListImageVisibilityAndJitterState { %log; %orig; }
+- (void)updateCurrentIconListIndexAndVisibility:(_Bool)arg1 { %log; %orig; }
+- (void)updateCurrentIconListIndexAndVisibility { %log; %orig; }
+- (_Bool)isFolderScrolling { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isScrolling { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)showCarrierDebuggingAlertIfNeeded { %log; %orig; }
+- (void)showInfoAlertIfNeeded:(_Bool)arg1 { %log; %orig; }
+- (void)showDeveloperBuildExpirationAlertIfNecessaryFromLockscreen:(_Bool)arg1 toLauncher:(_Bool)arg2 { %log; %orig; }
+- (void)_iconVisibilityChanged:(id)arg1 { %log; %orig; }
+- (void)_resetRootIconLists { %log; %orig; }
+- (id)folderNameForDisplayID:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)_prepareToResetRootIconLists { %log; %orig; }
+- (id)folderIconListAtIndex:(unsigned long long)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)rootIconListAtIndex:(long long)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (long long)currentFolderIconListIndex { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (long long)currentIconListIndex { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (id)_currentFolderController { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)_openFolderController { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)_rootFolderController { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)rootFolder { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (long long)orientation { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (long long)_effectiveOrientation { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (_Bool)shouldAutorotate { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (unsigned long long)supportedInterfaceOrientations { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (void)viewWillLayoutSubviews { %log; %orig; }
+- (id)contentView { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)loadView { %log; %orig; }
+- (void)dealloc { %log; %orig; }
+- (id)model { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)init { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)debugDescription { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)description { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long )hash { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (Class )superclass { %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end

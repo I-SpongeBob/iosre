@@ -1,0 +1,10 @@
+Package: com.lingyongqian.logintest
+Name: LoginTest
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: xieruxin
+Author: xieruxin
+Section: Tweaks
+Version: 0.0.1-201+debug
+Installed-Size: 132

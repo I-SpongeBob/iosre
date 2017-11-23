@@ -1,0 +1,250 @@
+%hook CMessageMgr
++ (id)GetPathOfOpenUploadCDNFile { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
++ (id)GetPathOfOpenUploadFile { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setPlayingVideoPath:(NSString *)playingVideoPath { %log; %orig; }
+- (NSString *)playingVideoPath { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+//- (void).cxx_destruct { %log; %orig; }
+- (unsigned int)GetMinCreateTimeInMessage:(id)arg1 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (unsigned int)GetMaxCreateTimeInMessage:(id)arg1 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (_Bool)hasMsg:(id)arg1 fromCreateTime:(unsigned int)arg2 endTime:(unsigned int)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)updateVideoDownloadModeWithClientId:(id)arg1 downloadMode:(unsigned long long)arg2 { %log; %orig; }
+- (_Bool)IsVideoDataAvailableByClientMediaId:(id)arg1 offset:(unsigned int)arg2 length:(unsigned int)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)RequestVideoDataByClientMediaID:(id)arg1 offset:(unsigned int)arg2 length:(unsigned int)arg3 durationSec:(unsigned int)arg4 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)IsVideoMoovHasDownloadedByMessageWrap:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)getImageMsg:(id)arg1 beforeCreateTime:(unsigned int)arg2 limit:(int)arg3 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getImageMsg:(id)arg1 limit:(int)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)onUploadCDNRecordMsgModMsgByBitSet:(id)arg1 MsgWrap:(id)arg2 BitSet:(unsigned int)arg3 { %log; %orig; }
+- (void)onDownOpenMsgModMsg:(id)arg1 MsgWrap:(id)arg2 BitSet:(unsigned int)arg3 { %log; %orig; }
+- (void)onUploadCDNAppMsgModMsgByBitSet:(id)arg1 MsgWrap:(id)arg2 BitSet:(unsigned int)arg3 { %log; %orig; }
+- (void)onUploadAppMsgModMsgByBitSet:(id)arg1 MsgWrap:(id)arg2 BitSet:(unsigned int)arg3 { %log; %orig; }
+- (void)onUploadImageCheckQQ { %log; %orig; }
+- (void)onUploadImageModMsg:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)onUploadImageModMsgByBitSet:(id)arg1 MsgWrap:(id)arg2 BitSet:(unsigned int)arg3 { %log; %orig; }
+- (void)onModMsgByBitSet:(id)arg1 MsgWrap:(id)arg2 BitSet:(unsigned int)arg3 { %log; %orig; }
+- (id)onGetMsg:(id)arg1 LocalID:(unsigned int)arg2 Wrap:(id)arg3 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)onGetBigImageErrorWithWrap:(id)arg1 { %log; %orig; }
+- (void)onGetBigImageResultWithWrap:(id)arg1 image:(id)arg2 imageData:(id)arg3 isSaveImgOK:(_Bool)arg4 { %log; %orig; }
+- (void)onUploadImageRequestWithWrap:(id)arg1 { %log; %orig; }
+- (void)enterBackground { %log; %orig; }
+- (void)enterForeground { %log; %orig; }
+- (void)reSendAllMsgFromNotificationDone { %log; %orig; }
+- (id)getSentFailMsgs { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)OnModMsg:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)onAuthOK { %log; %orig; }
+- (id)getSemaphore { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)IsRecordMsgDownloading:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)StopDownloadRecordMsg:(id)arg1 { %log; %orig; }
+- (void)StartDownloadByRecordData:(id)arg1 DataId:(id)arg2 thumb:(_Bool)arg3 data:(_Bool)arg4 { %log; %orig; }
+- (void)StartDownloadByRecordData:(id)arg1 DataId:(id)arg2 prior:(_Bool)arg3 { %log; %orig; }
+- (void)StartDownloadByRecordData:(id)arg1 DataId:(id)arg2 { %log; %orig; }
+- (void)StartDownloadByRecordMsg:(id)arg1 { %log; %orig; }
+- (void)StopUploadRecordMsgByUsername:(id)arg1 { %log; %orig; }
+- (void)StopUploadRecordMsg:(id)arg1 { %log; %orig; }
+- (void)ResendRecordMsg:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)AddRecordMsg:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)copyDataForDataList:(id)arg1 msgWrap:(id)arg2 { %log; %orig; }
+- (void)StartDownloadAppAttach:(id)arg1 MsgWrap:(id)arg2 AttachId:(id)arg3 AttachDataSize:(unsigned int)arg4 AttachFileExt:(id)arg5 { %log; %orig; }
+- (_Bool)InAppAttachDownloading:(id)arg1 MsgWrap:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)InAppAttachDownloading:(id)arg1 MsgWrap:(id)arg2 AttachId:(id)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+//- (_Bool)runTransaction:(CDUnknownBlockType)arg1 event:(CDUnknownBlockType)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+//- (_Bool)runTransaction:(CDUnknownBlockType)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)onDiskStorageWarningCleanedSize:(unsigned long long *)arg1 CacheMask:(unsigned int)arg2 { %log; %orig; }
+- (void)onDiskStorageWarningCleanedSize:(unsigned long long *)arg1 subQueue:(id)arg2 { %log; %orig; }
+- (void)onDiskStorageWarningCleanedSize:(unsigned long long *)arg1 { %log; %orig; }
+- (void)addAutoCleanTask { %log; %orig; }
+- (unsigned int)GetDownloadThumbStatus:(id)arg1 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (_Bool)StartDownloadThumb:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (unsigned int)GetUploadPercent:(id)arg1 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (void)StopImageDownloadTask:(id)arg1 { %log; %orig; }
+- (void)StopDownloadImage:(id)arg1 { %log; %orig; }
+- (void)StartDownloadImage:(id)arg1 HD:(_Bool)arg2 AutoDownload:(_Bool)arg3 { %log; %orig; }
+- (void)StartDownloadHDImageForSaveAlbum:(id)arg1 { %log; %orig; }
+- (id)GetAppMsgList:(id)arg1 FromID:(unsigned int)arg2 CreateTime:(unsigned int)arg3 Limit:(int)arg4 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetAppMsgList:(id)arg1 AfterID:(unsigned int)arg2 CreateTime:(unsigned int)arg3 Limit:(int)arg4 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned int)GetImgOrVideoMsgCount:(id)arg1 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (unsigned int)GetImgOrVideoMsgCount:(id)arg1 FromID:(unsigned int)arg2 CreateTime:(unsigned int)arg3 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (id)GetImgOrVideoOrAppNextMsg:(id)arg1 FromID:(unsigned int)arg2 CreateTime:(unsigned int)arg3 Limit:(int)arg4 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetImgOrVideoLastMsg:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetImgOrVideoOrAppLastMsg:(id)arg1 FromID:(unsigned int)arg2 CreateTime:(unsigned int)arg3 Limit:(int)arg4 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetImgOrVideoOrAppNextMsg:(id)arg1 StartCreateTime:(unsigned int)arg2 EndCreateTime:(unsigned int)arg3 Limit:(int)arg4 needFullMessage:(_Bool)arg5 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetImgOrVideoOrAppLastMsg:(id)arg1 StartCreateTime:(unsigned int)arg2 EndCreateTime:(unsigned int)arg3 Limit:(int)arg4 needFullMessage:(_Bool)arg5 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned int)GetImgOrVideoOrAppMsgMinCreateTime:(id)arg1 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (id)GetImgAndVideoMsgList:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetImgMsgList:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned int)GetImgMsgCount:(id)arg1 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (unsigned int)GetImgMsgCount:(id)arg1 FromID:(unsigned int)arg2 CreateTime:(unsigned int)arg3 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (id)GetImgLastMsg:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetImgLastMsg:(id)arg1 FromID:(unsigned int)arg2 CreateTime:(unsigned int)arg3 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetImgNextMsg:(id)arg1 FromID:(unsigned int)arg2 CreateTime:(unsigned int)arg3 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)onServiceReloadData { %log; %orig; }
+- (void)onServiceEnterBackground { %log; %orig; }
+- (void)onServiceClearData { %log; %orig; }
+- (_Bool)onServiceMemoryWarning { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)onServiceInit { %log; %orig; }
+- (void)CheckQQPwd { %log; %orig; }
+- (void)PostUpdateVideoMsgs:(id)arg1 { %log; %orig; }
+- (void)UpdateVideoMsg:(id)arg1 { %log; %orig; }
+- (void)PreUpdateVideoMsgs:(id)arg1 { %log; %orig; }
+- (void)OnErrorByReceiver:(id)arg1 ErrNo:(int)arg2 { %log; %orig; }
+- (void)OnErrorBySender:(id)arg1 ErrNo:(int)arg2 { %log; %orig; }
+- (void)OnMessageSentBySender:(id)arg1 { %log; %orig; }
+- (void)OnAddMessageByReceiver:(id)arg1 { %log; %orig; }
+- (void)OnAddMessageBySender:(id)arg1 { %log; %orig; }
+- (void)MessageReturn:(unsigned int)arg1 MessageInfo:(id)arg2 Event:(unsigned int)arg3 { %log; %orig; }
+- (void)MessageReturn:(id)arg1 Event:(unsigned int)arg2 { %log; %orig; }
+- (void)HandleSvrCmd:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)DelMsgPatten:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (id)GetLastVoipMsg:(id)arg1 AfterTime:(unsigned int)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetLastMsgToUsr:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetLastMsgFromUsr:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)ModVoipMsgStatus:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)CheckQueue { %log; %orig; }
+- (id)GetRealChatName:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)StopUploadAppAttach:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)StopDownloadAppAttach:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (_Bool)StartDownloadAppAttach:(id)arg1 MsgWrap:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)AddAppMsg:(id)arg1 MsgWrap:(id)arg2 Data:(id)arg3 Scene:(unsigned int)arg4 { %log; %orig; }
+- (void)AddAppMsg:(id)arg1 MsgWrap:(id)arg2 DataPath:(id)arg3 Scene:(unsigned int)arg4 { %log; %orig; }
+- (void)StartUploadAppMsg:(id)arg1 MsgWrap:(id)arg2 Scene:(unsigned int)arg3 { %log; %orig; }
+- (void)SetGetLocationEnd:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)UpdateEmoticonMsg:(id)arg1 { %log; %orig; }
+- (void)SetEmoticonGameEnd:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (_Bool)StopDownloadEmoticonMsgWrapByChatName:(id)arg1 n64SvrID:(long long)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)UpgradePriorityForMsgWrap:(id)arg1 { %log; %orig; }
+- (_Bool)StartDownloadEmoticonMsgWrap:(id)arg1 HighPriority:(_Bool)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isChatStatusNotifyOpenForMsgWrap:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)AddEmoticonMsg:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (_Bool)AddBackupMsg:(id)arg1 MsgWrap:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)backupMsgSrvIDExit:(id)arg1 MsgWrap:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)backupGetMsg:(id)arg1 n64SvrID:(long long)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)AddLocalMsg:(id)arg1 MsgWrap:(id)arg2 fixTime:(_Bool)arg3 NewMsgArriveNotify:(_Bool)arg4 { %log; %orig; }
+- (void)AddLocalMsg:(id)arg1 MsgWrap:(id)arg2 fixTime:(_Bool)arg3 NewMsgArriveNotify:(_Bool)arg4 Unique:(_Bool)arg5 { %log; %orig; }
+- (void)AddLocalMsg:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)AddUniqueLocalMsg:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)DropChatTable:(id)arg1 { %log; %orig; }
+- (void)AddFloatBottle:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)downLoadRemainPart:(id)arg1 DownloadMode:(unsigned long long)arg2 { %log; %orig; }
+- (void)delayDownloadVideoRemainPart:(id)arg1 DownloadMode:(unsigned long long)arg2 { %log; %orig; }
+- (void)StopDownloadVideoByChatName:(id)arg1 { %log; %orig; }
+- (void)StopDownloadVideo:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)StopDownloadVideo:(id)arg1 MsgWrap:(id)arg2 Result:(struct C2CDownloadResult *)arg3 { %log; %orig; }
+- (unsigned long long)GetVideoMessageDownloadMode:(id)arg1 { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (unsigned long long)GetVideoMessageDownloadModeFromCDNTask:(id)arg1 { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (void)ForceCleanAllPreloadVideoCache:(unsigned long long *)arg1 subQueue:(id)arg2 { %log; %orig; }
+- (void)CleanPreloadVideoCache { %log; %orig; }
+- (void)ReloadPreloadVideo { %log; %orig; }
+- (void)ResumePreloadVideo { %log; %orig; }
+- (void)PausePreloadVideo { %log; %orig; }
+- (void)StartPreloadVideo:(id)arg1 { %log; %orig; }
+- (unsigned long long)StartDownloadVideo:(id)arg1 MsgWrap:(id)arg2 Priority:(_Bool)arg3 DownloadMode:(unsigned long long)arg4 { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (void)StartDownloadVideo:(id)arg1 MsgWrap:(id)arg2 Priority:(_Bool)arg3 { %log; %orig; }
+- (void)StartDownloadVideo:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (_Bool)InternalStartDownloadShortVideo:(id)arg1 AutoDownload:(_Bool)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)StartDownloadShortVideo:(id)arg1 { %log; %orig; }
+- (void)StopUploadVideoByChatName:(id)arg1 { %log; %orig; }
+- (void)StopUploadVideo:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)StartUploadVideo:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)AddVideoMsg:(id)arg1 ToUsr:(id)arg2 VideoInfo:(id)arg3 MsgType:(unsigned int)arg4 { %log; %orig; }
+- (void)ResendSightMsg:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)AddShortVideoMsg:(id)arg1 ToUsr:(id)arg2 VideoInfo:(id)arg3 { %log; %orig; }
+- (void)AddVideoMsg:(id)arg1 ToUsr:(id)arg2 VideoInfo:(id)arg3 { %log; %orig; }
+- (void)UpdateMessage:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)UpdateVoiceMessage:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)UpdateVoiceStatus:(id)arg1 LocalID:(unsigned int)arg2 DownloadStatus:(unsigned int)arg3 { %log; %orig; }
+- (id)GetRevokeMsgBySvrId:(long long)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned int)GetMesCount:(id)arg1 MesType:(unsigned int)arg2 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (unsigned int)GetAllMesCount:(id)arg1 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (unsigned int)GetUnReadCountInHello:(id)arg1 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (unsigned int)GetCountInHello:(id)arg1 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (unsigned int)GetUnReadCount:(id)arg1 CreateTimeLargerThan:(unsigned int)arg2 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (unsigned int)GetUnReadCount:(id)arg1 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (void)autoEmptyTrashTable { %log; %orig; }
+- (void)emptyTrashTable { %log; %orig; }
+- (void)DelMsg:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)DelAllMsgs:(id)arg1 { %log; %orig; }
+- (void)DelMsgForBatchDelete:(id)arg1 MsgList:(id)arg2 { %log; %orig; }
+- (void)DelMsg:(id)arg1 MsgList:(id)arg2 DelAll:(_Bool)arg3 { %log; %orig; }
+- (void)ClearUnreadForSync:(id)arg1 CreateTime:(unsigned int)arg2 { %log; %orig; }
+- (void)ClearUnRead:(id)arg1 FromID:(unsigned int)arg2 ToID:(unsigned int)arg3 { %log; %orig; }
+- (unsigned int)GetSayHelloStatus:(id)arg1 LocalID:(unsigned int)arg2 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (_Bool)SetSayHelloStatus:(id)arg1 LocalID:(unsigned int)arg2 Status:(unsigned int)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)AddHelloMsgList:(id)arg1 MsgList:(id)arg2 { %log; %orig; }
+- (void)AddHelloMsg:(id)arg1 MsgWrap:(id)arg2 HelloUser:(id)arg3 OpCode:(unsigned int)arg4 DES:(unsigned int)arg5 checkCreateTime:(_Bool)arg6 status:(unsigned int)arg7 { %log; %orig; }
+- (_Bool)ClearHelloUnRead:(id)arg1 HelloUser:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)DelHelloMsg:(id)arg1 HelloUser:(id)arg2 { %log; %orig; }
+- (id)GetDBHelloUsers:(id)arg1 Limit:(int)arg2 OnlyUnread:(_Bool)arg3 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetHelloMsg:(id)arg1 HelloUser:(id)arg2 Limit:(int)arg3 OnlyTo:(_Bool)arg4 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetHelloUsers:(id)arg1 Limit:(int)arg2 OnlyUnread:(_Bool)arg3 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)CheckMessageStatus:(id)arg1 Msg:(id)arg2 { %log; %orig; }
+- (id)GetFirstUnreadMsgIncludingNewXML:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetFirstUnreadMsg:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetLastInsertMsg:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetLastMsg:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned int)GetTextMsgCount:(id)arg1 FromID:(unsigned int)arg2 ToID:(unsigned int)arg3 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (id)GetTextMsg:(id)arg1 FromID:(unsigned int)arg2 ToID:(unsigned int)arg3 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetTextMsg:(id)arg1 FromID:(unsigned int)arg2 Limit:(int)arg3 LeftCount:(unsigned int *)arg4 LeftUnreadCount:(unsigned int *)arg5 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)DelOverTimeNewBizExtMsgsOnType:(int)arg1 { %log; %orig; }
+- (id)GetAllChatNameWithValidNewBizMsg { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned int)GetAllValidNewBizMsgCount { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (unsigned int)GetValidNewBizMsgCountByChatName:(id)arg1 bizType:(int)arg2 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (void)ModNewBizExtMsg:(id)arg1 bizId:(id)arg2 bizStatus:(int)arg3 bizType:(int)arg4 { %log; %orig; }
+- (id)getMessageWrapArray:(id)arg1 bizId:(id)arg2 bizType:(int)arg3 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getMessageWrapArray:(id)arg1 bizId:(id)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetMsg:(id)arg1 BizMsgClientID:(id)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetMsg:(id)arg1 n64SvrID:(long long)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetMsg:(id)arg1 LocalID:(unsigned int)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetMsg:(id)arg1 LocalID:(unsigned int)arg2 hasError:(_Bool *)arg3 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)QueryMsgFromChat:(id)arg1 queryText:(id)arg2 FromID:(unsigned int)arg3 FromCreateTime:(unsigned int)arg4 Limit:(int)arg5 LeftCount:(unsigned int *)arg6 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetDownMsgByCreateTime:(id)arg1 FromID:(unsigned int)arg2 FromCreateTime:(unsigned int)arg3 Limit:(int)arg4 LeftCount:(unsigned int *)arg5 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetMsgByCreateTime:(id)arg1 FromID:(unsigned int)arg2 FromCreateTime:(unsigned int)arg3 Limit:(int)arg4 LeftCount:(unsigned int *)arg5 FromSequence:(unsigned int)arg6 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetMsgByCreateTime:(id)arg1 FromID:(unsigned int)arg2 FromCreateTime:(unsigned int)arg3 Limit:(int)arg4 LeftCount:(unsigned int *)arg5 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetFirstMsgByCreateTime:(id)arg1 FromID:(unsigned int)arg2 FromCreateTime:(unsigned int)arg3 Limit:(int)arg4 LeftCount:(unsigned int *)arg5 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetLastMsgByCreateTime:(id)arg1 FromID:(unsigned int)arg2 FromCreateTime:(unsigned int)arg3 Limit:(int)arg4 LeftCount:(unsigned int *)arg5 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetDownMsg:(id)arg1 FromID:(unsigned int)arg2 Limit:(int)arg3 LeftCount:(unsigned int *)arg4 LeftUnreadCount:(unsigned int *)arg5 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetMsg:(id)arg1 FromID:(unsigned int)arg2 Limit:(int)arg3 LeftCount:(unsigned int *)arg4 LeftUnreadCount:(unsigned int *)arg5 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)AddMsgPattern:(id)arg1 { %log; %orig; }
+- (void)HandleMsgList:(id)arg1 MsgList:(id)arg2 { %log; %orig; NSLog(@"%@",[arg2 class]);}
+- (void)ResendMsg:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)ModMsgByBitSet:(id)arg1 MsgWrap:(id)arg2 BitSet:(unsigned int)arg3 { %log; %orig; }
+- (void)ModMsgWithoutNotify:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)ModMsg:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)AddMsg:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)onRevokeMsg:(id)arg1 { %log; %orig; }
+- (void)onRevokeMsgCgiReturn:(id)arg1 { %log; %orig; }
+- (_Bool)RevokeMsg:(id)arg1 MsgWrap:(id)arg2 Counter:(unsigned int)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)AsyncOnCheckQQ { %log; %orig; }
+- (void)AsyncOnModMsg:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (_Bool)IsVideoMsgdDownloadIng:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)IsVideoMsgUploadIng:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)InitMsgMgr:(id)arg1 Lock:(id)arg2 { %log; %orig; }
+- (_Bool)SaveMesVoice:(id)arg1 MsgWrap:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)SaveMsgThumb:(id)arg1 MsgWrap:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)SaveMesImg:(id)arg1 MsgWrap:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)dealloc { %log; %orig; }
+- (id)init { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)MainThreadNotifyToExt:(id)arg1 { %log; %orig; }
+- (void)AsyncOnPushMsg:(id)arg1 { %log; %orig; }
+- (void)AsyncOnDelMsg:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)AsyncOnSendVoiceError:(id)arg1 MsgWrap:(id)arg2 ErroNO:(unsigned int)arg3 { %log; %orig; }
+- (void)AsyncOnUnReadChange:(id)arg1 { %log; %orig; }
+- (void)AsyncOnDelMsg:(id)arg1 DelAll:(_Bool)arg2 { %log; %orig; }
+- (void)AsyncOnDelMsg:(id)arg1 { %log; %orig; }
+- (void)AsyncOnMsgNotAddDBSession:(id)arg1 MsgList:(id)arg2 { %log; %orig; }
+- (void)AsyncOnSpecialSession:(id)arg1 MsgList:(id)arg2 { %log; %orig; }
+- (void)AsyncOnNotAddDBMessage:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)AsyncOnAddMsgForSession:(id)arg1 MsgWrap:(id)arg2 NewMsgArriveNotify:(_Bool)arg3 { %log; %orig; }
+- (void)AsyncOnAddMsgForSession:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)AsyncOnAddMsgListForSession:(id)arg1 NotifyUsrName:(id)arg2 { %log; %orig; }
+- (void)AsyncOnAddMsg:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)AsyncOnPreAddMsg:(id)arg1 MsgWrap:(id)arg2 { %log; %orig; }
+- (void)UpdateVideoStatus:(id)arg1 { %log; %orig; }
+- (_Bool)IsRecordMsgUploading:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)IsImageMsgUploadIng:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)escapeKeywordForQueryString:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)isContact:(id)arg1 ConfirmToQueryString:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)BackGroundAddHelloMsg:(id)arg1 { %log; %orig; }
+- (NSString *)debugDescription { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)description { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long )hash { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (Class )superclass { %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end

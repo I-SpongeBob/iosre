@@ -1,0 +1,73 @@
+# This is the local http proxy server port.
+# Note there is another SOCKS5 proxy server starts at port+1 automatically.
+port:          9090
+# Adapter is the remote proxy server you want to connect to
+adapter:
+     # id is used to distinguish adapter when defining rules.
+     # There is a 'direct' adapter that connect directly to target host without proxy.
+  - id:        HK27
+    type:      ss
+    host:      144.48.4.27
+    port:      9233
+    # Currently support: AES-128-CFB, AES-192-CFB, AES-256-CFB, chacha20, salsa20, rc4-md5
+    # Shadowsocks encryption methods are not fully tested, please report if there is anything not working.
+    method:    AES-256-CFB
+    password:  "4}KEKkC2hTc9qy8ArR[RGTtB"
+  - id:        HK28
+    type:      ss
+    host:      144.48.4.28
+    port:      7587
+    method:    AES-256-CFB
+    password:  "bDVCK)ohE4?7GEg$skzYpsD4"
+  - id:        HK29
+    type:      ss
+    host:      144.48.4.29
+    port:      5812
+    method:    AES-256-CFB
+    password:  "njZ;E>zemCfzLTi9L47ToRH%"
+  - id:        HK103
+    type:      ss
+    host:      103.213.245.252
+    port:      9528
+    method:    AES-256-CFB
+    password:  "Rf=W6Uwb[]nKgnMNWYzML2T9N"
+  - id:        JP133
+    type:      ss
+    host:      133.130.118.236
+    port:      9527
+    method:    AES-256-CFB
+    password:  "VdEH2mGh@AZvu@Q8"
+  # Speed adapter automatically connects to all specified adapters (with given delay)
+  # and uses the fastest one that becomes ready.
+  - id:        proxy
+    type:      SPEED
+    adapters:
+      - id:    HK27
+        # Delay in milliseconds.
+        delay: 0
+      - id:    HK28
+        delay: 0
+      - id:    HK29
+        delay: 0
+      - id:    HK103
+        delay: 0
+      - id:    JP133
+        delay: 0
+  - id:        speed
+    type:      SPEED
+    adapters:
+      - id:    proxy
+        delay: 300
+      - id:    direct
+        delay: 0
+  # Disconnect after given delay without connecting to remote.
+  - id:        reject
+    type:      reject
+    # It's very important to set a delay since some apps may try to reconnect repeatedly.
+    delay:     300
+# Here defines how things should work.
+# Rule will be matched one by one.
+rule:
+  - type:      all
+  # Match all other requests.
+    adapter:   proxy

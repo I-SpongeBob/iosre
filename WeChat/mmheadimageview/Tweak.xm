@@ -1,0 +1,50 @@
+%hook MMHeadImageView
+//- (void).cxx_destruct { %log; %orig; }
+- (void)OnLongPress:(id)arg1 { %log; %orig; }
+- (void)OnPress:(id)arg1 { %log; %orig; }
+- (void)setAddBorder:(_Bool )addBorder { %log; %orig; }
+- (_Bool )addBorder { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)addSceneImageView:(long long)arg1 { %log; %orig; }
+- (void)setBorderImage:(UIImage *)borderImage { %log; %orig; }
+- (UIImage *)borderImage { %log; UIImage * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setBorderImageHL:(UIImage *)borderImageHL { %log; %orig; }
+- (UIImage *)borderImageHL { %log; UIImage * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)checkAndUpdateImage { %log; %orig; }
+- (void)setConerSize:(unsigned int )conerSize { %log; %orig; }
+- (unsigned int )conerSize { %log; unsigned int  r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (void)dealloc { %log; %orig; }
+- (void)setDefaultImage:(UIImage *)defaultImage { %log; %orig; }
+- (UIImage *)defaultImage { %log; UIImage * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)doUpdateHeadImg:(_Bool)arg1 { %log; %orig; }
+- (id)getRealUserName:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setHeadCategory:(unsigned char )headCategory { %log; %orig; }
+- (unsigned char )headCategory { %log; unsigned char  r = %orig; HBLogDebug(@" = %hhu", r); return r; }
+- (void)setHeadUseScene:(unsigned char )headUseScene { %log; %orig; }
+- (unsigned char )headUseScene { %log; unsigned char  r = %orig; HBLogDebug(@" = %hhu", r); return r; }
+- (void)setImageSize:(struct CGSize )imageSize { %log; %orig; }
+- (struct CGSize )imageSize { %log; struct CGSize  r = %orig; return r; }
+- (id)initWithUsrName:(id)arg1 headImgUrl:(id)arg2 bAutoUpdate:(_Bool)arg3 bRoundCorner:(_Bool)arg4 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (struct CGSize)intrinsicContentSize { %log; struct CGSize r = %orig; return r; }
+- (void)setIsShowCertIcon:(_Bool )isShowCertIcon { %log; %orig; }
+- (_Bool )isShowCertIcon { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)layoutSubviews { %log; %orig; }
+- (NSString *)nsUsrName { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)onHeadImageChange:(id)arg1 { %log; %orig; }
+- (void)onKFContactHeadImgUpdate:(id)arg1 { %log; %orig; }
+- (void)onModifyContact:(id)arg1 { %log; %orig; }
+- (void)onModifyEnterpriseContact:(id)arg1 { %log; %orig; }
+- (void)onStrangerContactUpdated:(id)arg1 { %log; %orig; }
+- (void)setHeadImageByName:(id)arg1 { %log; %orig; }
+- (void)setTarget:(id)arg1 action:(SEL)arg2 { %log; %orig; }
+- (void)setTarget:(id)arg1 action:(SEL)arg2 withObject:(id)arg3 { %log; %orig; }
+- (void)setTargetForLongPress:(id)arg1 action:(SEL)arg2 { %log; %orig; }
+- (void)triggerLongPressFor3DTouchAtLocation:(struct CGPoint)arg1 inCoordinateView:(id)arg2 { %log; %orig; }
+- (void)updateCertInfoView { %log; %orig; }
+- (void)updateExtensionRegister { %log; %orig; }
+- (void)updateHeadImage:(id)arg1 { %log; %orig; }
+- (void)updateUsrName:(id)arg1 withHeadImgUrl:(id)arg2 { %log; %orig; }
+- (NSString *)debugDescription { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)description { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long )hash { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (Class )superclass { %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end

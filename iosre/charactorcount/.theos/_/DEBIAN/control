@@ -1,0 +1,11 @@
+Package: com.lyq.charactorcount
+Name: charactorcount
+Depends: mobilesubstrate,firmware(>=8.0)
+Architecture: iphoneos-arm
+Description: Add a character count to Notes
+Maintainer: xieruxin
+Author: xieruxin
+Section: Tweaks
+Homepage: http://bbs.iosre.com
+Version: 0.0.1-22+debug
+Installed-Size: 136

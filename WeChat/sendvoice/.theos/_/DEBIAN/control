@@ -1,0 +1,10 @@
+Package: com.lingyongqian.sendvoice
+Name: SendVoice
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: xieruxin
+Author: xieruxin
+Section: Tweaks
+Version: 0.0.1-2+debug
+Installed-Size: 524

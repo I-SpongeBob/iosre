@@ -1,0 +1,181 @@
+#import "head.h"
+
+%hook MMUIViewController
+//- (void).cxx_destruct { %log; %orig; }
+- (void)AddViewToFullScreenViewList:(id)arg1 { %log; %orig; }
+- (void)ReLayoutFullScreenViews { %log; %orig; }
+- (void)RemoveFullScreenViewList { %log; %orig; }
+- (_Bool)accessibilityPerformEscape { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)addFakeNaviView { %log; %orig; }
+- (void)adjustSubviewRects { %log; %orig; }
+- (void)adjustTableViewInset:(id)arg1 { %log; %orig; }
+- (void)adjustTableViewRect { %log; %orig; }
+- (void)adjustView { %log; %orig; }
+- (void)adjustViewAndNavBarRect { %log; %orig; }
+- (void)appendEndOpInfo:(id)arg1 { %log; %orig; }
+- (void)beginAppearanceTransition:(_Bool)arg1 animated:(_Bool)arg2 { %log; %orig; }
+- (void)setBottomView:(UIView *)bottomView { %log; %orig; }
+- (UIView *)bottomView { %log; UIView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)changeTopBarsHiddenAnimated:(_Bool)arg1 { %log; %orig; }
+- (void)dealloc { %log; %orig; }
+- (void)didAppear { %log; %orig; }
+- (void)didBeginEditing:(id)arg1 { %log; %orig; }
+- (void)didDisshow { %log; %orig; }
+- (void)didEndEditing:(id)arg1 { %log; %orig; }
+//- (void)didMoveToParentViewController:(id)arg1 { %log; %orig; }
+- (void)didReceiveMemoryWarning { %log; %orig; }
+- (void)didRotateFromInterfaceOrientation:(long long)arg1 { %log; %orig; }
+- (void)disMissSelf { %log; %orig; }
+- (_Bool)gestureRecognizer:(id)arg1 shouldBeRequiredToFailByGestureRecognizer:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)gestureRecognizer:(id)arg1 shouldReceiveTouch:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)gestureRecognizer:(id)arg1 shouldRequireFailureOfGestureRecognizer:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)gestureRecognizerShouldBegin:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (double)getContentViewHeight { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (double)getContentViewY { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (double)getContentViewYforTranslucentNaviBar { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (double)getLeftBarButtonWidth { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (double)getRightBarButtonWidth { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (double)getSearchBarSearchingY { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (id)getTitleColor { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getVCWithDeepLinkName:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getViewController { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (double)getVisibleHeight { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (double)getVisibleHeightOri:(long long)arg1 { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (void)handleUrl:(id)arg1 DisableFirstGetA8Key:(_Bool)arg2 extraInfo:(id)arg3 { %log; %orig; }
+- (id)init { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)initDeepLinkConfig { %log; %orig; }
+- (_Bool)interactivePopGestureRecognizerShouldBegin:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)internalAddFakeNaviView:(id)arg1 { %log; %orig; }
+- (_Bool)isPresentedIn { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isPushedIn { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isSubviewResponder:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isSvrErrorTipForbidden { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)keyboardDidHide:(id)arg1 { %log; %orig; }
+- (void)keyboardWillShow:(id)arg1 { %log; %orig; }
+- (void)setLoadingViewX:(MMLoadingView *)loadingViewX { %log; %orig; }
+- (MMLoadingView *)loadingViewX { %log; MMLoadingView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setM_arrEndUserOpInfo:(NSMutableArray *)m_arrEndUserOpInfo { %log; %orig; }
+- (NSMutableArray *)m_arrEndUserOpInfo { %log; NSMutableArray * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setM_bAnimated:(_Bool )m_bAnimated { %log; %orig; }
+- (_Bool )m_bAnimated { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_bAnimating:(_Bool )m_bAnimating { %log; %orig; }
+- (_Bool )m_bAnimating { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_bDisableAdjustInsetAndOffset:(_Bool )m_bDisableAdjustInsetAndOffset { %log; %orig; }
+- (_Bool )m_bDisableAdjustInsetAndOffset { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_bInteractivePopEnabled:(_Bool )m_bInteractivePopEnabled { %log; %orig; }
+- (_Bool )m_bInteractivePopEnabled { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_bIsBeingPoped:(_Bool )m_bIsBeingPoped { %log; %orig; }
+- (_Bool )m_bIsBeingPoped { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_bStopPopWhenDeleteContact:(_Bool )m_bStopPopWhenDeleteContact { %log; %orig; }
+- (_Bool )m_bStopPopWhenDeleteContact { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_fullScreenViews:(NSMutableArray *)m_fullScreenViews { %log; %orig; }
+- (NSMutableArray *)m_fullScreenViews { %log; NSMutableArray * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setM_newsTitleRecordLabel:(UILabel *)m_newsTitleRecordLabel { %log; %orig; }
+- (UILabel *)m_newsTitleRecordLabel { %log; UILabel * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setM_uiVcType:(unsigned int )m_uiVcType { %log; %orig; }
+- (unsigned int )m_uiVcType { %log; unsigned int  r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (id)mmNavigationController:(id)arg1 animationControllerForOperation:(long long)arg2 fromViewController:(id)arg3 toViewController:(id)arg4 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)mmNavigationController:(id)arg1 interactionControllerForAnimationController:(id)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4 { %log; %orig; }
+- (void)onMainWindowFrameChanged { %log; %orig; }
+- (void)onTaskBarHiddenChanged:(_Bool)arg1 withAnimation:(long long)arg2 { %log; %orig; }
+- (void)onTopBarFrameChanged { %log; %orig; }
+- (void)onTopBarHiddenChanged:(long long)arg1 { %log; %orig; }
+- (void)parseDeepLink:(id)arg1 animation:(_Bool)arg2 { %log; %orig; }
+- (void)postNotification { %log; %orig; }
+- (long long)preferredInterfaceOrientationForPresentation { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (long long)preferredStatusBarStyle { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (_Bool)prefersStatusBarHidden { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+/*- (void)setPresentedModalViewController:(__weak UIViewController *)presentedModalViewController { %log; %orig; }
+- (__weak UIViewController *)presentedModalViewController { %log; __weak UIViewController * r = %orig; HBLogDebug(@" = 0x%x", (unsigned int)r); return r; }
+- (void)setPresentingModalViewController:(__weak UIViewController *)presentingModalViewController { %log; %orig; }
+- (__weak UIViewController *)presentingModalViewController { %log; __weak UIViewController * r = %orig; HBLogDebug(@" = 0x%x", (unsigned int)r); return r; }
+- (void)setPreviousResponder:(__weak UIResponder *)previousResponder { %log; %orig; }
+- (__weak UIResponder *)previousResponder { %log; __weak UIResponder * r = %orig; HBLogDebug(@" = 0x%x", (unsigned int)r); return r; }*/
+- (void)protectStatusBarFromBeingFuckedByForeGround:(SEL)arg1 { %log; %orig; }
+- (void)removeDuplicateBarButton { %log; %orig; }
+- (void)removeFakeNaviView { %log; %orig; }
+- (void)removeNavigationBarBkg { %log; %orig; }
+- (void)reportEndOpInfo { %log; %orig; }
+- (void)resetTableViewOffset:(id)arg1 { %log; %orig; }
+- (void)resetViewStatus { %log; %orig; }
+- (void)resignSubviewResponder:(id)arg1 { %log; %orig; }
+- (void)restoreNavigationBarBkg { %log; %orig; }
+- (void)safeSetEdgesForExtendedLayout:(unsigned long long)arg1 { %log; %orig; }
+- (void)setAutolayoutContentInset:(struct UIEdgeInsets)arg1 forScrollView:(id)arg2 { %log; %orig; }
+- (void)setAutolayoutTopOffset:(double)arg1 forView:(id)arg2 { %log; %orig; }
+- (void)setBackBarButton { %log; %orig; }
+- (void)setDeepLinkParam:(id)arg1 { %log; %orig; }
+- (void)setIsPopByClickingURL { %log; %orig; }
+- (void)setOutLine:(_Bool)arg1 { %log; %orig; }
+- (void)setStatusBarFontBlack { %log; %orig; }
+- (void)setStatusBarFontWhite { %log; %orig; }
+- (void)setStatusBarHidden:(_Bool)arg1 { %log; %orig; }
+- (void)setStatusBarHidden:(_Bool)arg1 withAnimation:(long long)arg2 { %log; %orig; }
+- (void)setSubView:(id)arg1 OutLine:(_Bool)arg2 { %log; %orig; }
+- (void)setTitle:(id)arg1 { %log; %orig; }
+- (void)setTitleColor:(id)arg1 { %log; %orig; }
+- (void)setTitleInterfaceOritation:(long long)arg1 { %log; %orig; }
+- (void)setTitleOnly:(id)arg1 { %log; %orig; }
+- (void)setTitleView:(id)arg1 { %log; %orig; }
+- (void)setTopBarsHidden:(_Bool)arg1 animated:(_Bool)arg2 { %log; %orig; }
+- (void)setWCBizAuthTitle:(id)arg1 { %log; %orig; }
+- (_Bool)shouldAutorotate { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)shouldEnableKeyboardInteractivePop { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)shouldInteractivePop { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)startBizLoading { %log; %orig; }
+- (void)startForcedRotationToPortrait { %log; %orig; }
+- (void)startLoadingBlocked { %log; %orig; }
+- (void)startLoadingNonBlock { %log; %orig; }
+- (void)startLoadingWithText:(id)arg1 { %log; %orig; }
+- (void)startLoadingWithText:(id)arg1 block:(_Bool)arg2 { %log; %orig; }
+- (void)startLoadingWithText:(id)arg1 delayAnimation:(double)arg2 block:(_Bool)arg3 { %log; %orig; }
+- (void)stopBizLoading { %log; %orig; }
+- (void)stopLoading { %log; %orig; }
+- (void)stopLoadingWithFailText:(id)arg1 { %log; %orig; }
+- (void)stopLoadingWithOKText:(id)arg1 { %log; %orig; }
+- (unsigned long long)supportedInterfaceOrientations { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (double)tableView:(id)arg1 heightForFooterInSection:(long long)arg2 { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (double)tableView:(id)arg1 heightForHeaderInSection:(long long)arg2 { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (id)tableView:(id)arg1 viewForFooterInSection:(long long)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)tableView:(id)arg1 viewForHeaderInSection:(long long)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)tagForActivePage { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)tagForCurrentPage { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)useBlackStatusbar { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)useCustomNavibar { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)useTransparentNavibar { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)viewDidAppear:(_Bool)arg1 { %log; %orig; }
+- (void)viewDidBeDismissed:(_Bool)arg1 { %log; %orig; }
+- (void)viewDidBePoped:(_Bool)arg1 { %log; %orig; }
+- (void)viewDidBePresented:(_Bool)arg1 { %log; %orig; }
+- (void)viewDidBePushed:(_Bool)arg1 { %log; %orig; }
+- (void)viewDidDisappear:(_Bool)arg1 { %log; %orig; }
+- (void)viewDidLayoutSubviews { %log; %orig; }
+- (void)viewDidLoad { %log; %orig; }
+- (void)viewDidPop:(_Bool)arg1 { %log; %orig; }
+- (void)viewDidPush:(_Bool)arg1 { %log; %orig; }
+- (void)viewDidTransitionToNewSize { %log; %orig; }
+- (void)viewWillAppear:(_Bool)arg1 { %log; %orig; }
+- (void)viewWillBeDismissed:(_Bool)arg1 { %log; %orig; }
+- (void)viewWillBePoped:(_Bool)arg1 { %log; %orig; }
+- (void)viewWillBePresented:(_Bool)arg1 { %log; %orig; }
+- (void)viewWillBePushed:(_Bool)arg1 { %log; %orig; }
+- (void)viewWillDisappear:(_Bool)arg1 { %log; %orig; }
+- (void)viewWillDismiss:(_Bool)arg1 { %log; %orig; }
+- (void)viewWillPop:(_Bool)arg1 { %log; %orig; }
+- (void)viewWillPresent:(_Bool)arg1 { %log; %orig; }
+- (void)viewWillPush:(_Bool)arg1 { %log; %orig; }
+- (void)willAnimateRotationToInterfaceOrientation:(long long)arg1 duration:(double)arg2 { %log; %orig; }
+- (void)willAppear { %log; %orig; }
+- (void)willAppearanceTransition { %log; %orig; }
+- (void)willDisappear { %log; %orig; }
+- (void)willDismissAndShow { %log; %orig; }
+- (void)willDisshow { %log; %orig; }
+- (void)willRotateToInterfaceOrientation:(long long)arg1 duration:(double)arg2 { %log; %orig; }
+- (void)willShow { %log; %orig; }
+- (void)windowCancelCover { %log; %orig; }
+- (NSString *)debugDescription { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)description { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long )hash { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (Class )superclass { %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end

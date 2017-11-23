@@ -1,0 +1,64 @@
+%hook CGroupMgr
++ (_Bool)IsReservedGroupTopic:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+//- (void).cxx_destruct { %log; %orig; }
+- (void)MessageReturn:(id)arg1 Event:(unsigned int)arg2 { %log; %orig; }
+- (void)OnOplogResp:(id)arg1 { %log; %orig; }
+- (void)OnOplogRespForChangeChatRoomAccessType:(id)arg1 Resp:(id)arg2 { %log; %orig; }
+- (void)OnOplogRespForModTopic:(id)arg1 Resp:(id)arg2 { %log; %orig; }
+- (void)OnSetChatRoomDescResp:(id)arg1 { %log; %orig; }
+- (_Bool)SetChatRoomDesc:(id)arg1 Desc:(id)arg2 Flag:(unsigned int)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)OnGetChatRoomInfoResp:(id)arg1 { %log; %orig; }
+- (void)OnApproveGroupMember:(id)arg1 { %log; %orig; }
+- (_Bool)ApproveGroupMember:(id)arg1 withInviterName:(id)arg2 withInviteeList:(id)arg3 withTicket:(id)arg4 withUserData:(id)arg5 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)ChangeChatRoomAccessType:(id)arg1 type:(unsigned int)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)OnChangeChatRoomOwnerResp:(id)arg1 { %log; %orig; }
+- (_Bool)ChangeChatRoomOwner:(id)arg1 NewOwner:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)OnInviteChatRoomMemberResp:(id)arg1 { %log; %orig; }
+- (_Bool)InviteGroupMember:(id)arg1 withMemberList:(id)arg2 withInviterScene:(unsigned int)arg3 withTicket:(id)arg4 withUserData:(id)arg5 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)InviteGroupMember:(id)arg1 withMemberList:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (int)CanDonateChatRoom { %log; int r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (int)CanUpgradeChatRoom { %log; int r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)UpgradeChatRoom:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)GetChatRoomUpgradeStatus:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)ForceUpdateChatRoomContact:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)GetChatRoomInfo:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)GetEntireChatRoomMemberDetail:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)GetChatRoomMemberDetail:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (unsigned int)createProtoBufEvent:(id)arg1 forCgi:(unsigned int)arg2 andUserData:(id)arg3 eventHandler:(Class)arg4 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (unsigned int)createProtoBufEvent:(id)arg1 forCgi:(unsigned int)arg2 andUserData:(id)arg3 { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (void)onGetChatRoomUpgradeStatus:(id)arg1 { %log; %orig; }
+- (void)OnUpdateContact:(id)arg1 { %log; %orig; }
+- (void)OnGetChatRoomMemberDetail:(id)arg1 { %log; %orig; }
+- (void)OnUpgradeChatRoom:(id)arg1 { %log; %orig; }
+- (int)OnCreateChatRoom:(id)arg1 { %log; int r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)HandleCreateChatRoomOK:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)addCreateMsg:(id)arg1 ContactList:(id)arg2 { %log; %orig; }
+- (void)OnDeleteChatRoomMemberResponse:(id)arg1 { %log; %orig; }
+- (void)NotifyFromEvent:(id)arg1 Message:(unsigned int)arg2 MessageInfo:(id)arg3 { %log; %orig; }
+- (void)OnAddChatRoomMember:(id)arg1 { %log; %orig; }
+- (id)genContactFromMemberResp:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)addReceiveVerifyMsgSystemMsg:(id)arg1 Msg:(id)arg2 { %log; %orig; }
+- (id)genVerifyMsgDesc:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)addChatMemberNeedVerifyMsg:(id)arg1 ContactList:(id)arg2 { %log; %orig; }
+- (_Bool)UnShowInContactBook:(id)arg1 sync:(_Bool)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)ShowInContactBook:(id)arg1 sync:(_Bool)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)IsUsrInChatRoom:(id)arg1 Usr:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)GetGroupMemberWithOutMyself:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetGroupMemberUserList:(id)arg1 chatRoomMemList:(id)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)GetGroupMember:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)QuitGroup:(id)arg1 withUsrName:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)SetGroupTopic:(id)arg1 withTopic:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)SetUndeliverCountOpen:(_Bool)arg1 forGroup:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)SetShowDislayName:(_Bool)arg1 forGroup:(id)arg2 sync:(_Bool)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)DeleteGroupMember:(id)arg1 withMemberList:(id)arg2 scene:(unsigned long long)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)AddGroupMember:(id)arg1 withMemberList:(id)arg2 withDesp:(id)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)CreateGroup:(id)arg1 withMemberList:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r);NSLog(@"%@————%@",[arg2 class],[[arg2 objectAtIndex:0] class]); return r; }
+- (void)initDB:(id)arg1 withLock:(id)arg2 { %log; %orig; }
+- (void)dealloc { %log; %orig; }
+- (void)onServiceInit { %log; %orig; }
+- (id)init { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)debugDescription { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)description { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long )hash { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (Class )superclass { %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end

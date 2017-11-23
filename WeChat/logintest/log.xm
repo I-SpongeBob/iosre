@@ -1,0 +1,81 @@
+%hook WCActionSheet
++ (long long)getActionSheetWidth { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+//- (void).cxx_destruct { %log; %orig; }
+- (void)OnCancel:(id)arg1 { %log; %orig; }
+- (void)OnDefaultButtonTapped:(id)arg1 { %log; %orig; }
+- (_Bool)accessibilityPerformEscape { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (long long)addButtonWithItem:(id)arg1 atIndex:(unsigned long long)arg2 { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (long long)addButtonWithTitle:(id)arg1 { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (long long)addButtonWithTitle:(id)arg1 atIndex:(unsigned long long)arg2 { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (long long)addCustomViewWithTitle:(id)arg1 fontSize:(long long)arg2 fontColor:(id)arg3 WithDesc:(id)arg4 descFontSize:(long long)arg5 descFontColor:(id)arg6 enable:(_Bool)arg7 { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (void)addTapRecognizer { %log; %orig; }
+- (void)appendButtonTitle:(id)arg1 atIndex:(int)arg2 { %log; %orig; }
+- (void)setBackgroundView:(UIView *)backgroundView { %log; %orig; }
+- (UIView *)backgroundView { %log; UIView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)buttonTitleAtIndex:(long long)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setButtonTitleList:(NSMutableArray *)buttonTitleList { %log; %orig; }
+- (NSMutableArray *)buttonTitleList { %log; NSMutableArray * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setCancelBtnTextColor:(UIColor *)cancelBtnTextColor { %log; %orig; }
+- (UIColor *)cancelBtnTextColor { %log; UIColor * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setCancelButtonIndex:(long long )cancelButtonIndex { %log; %orig; }
+- (long long )cancelButtonIndex { %log; long long  r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (void)setCancelButtonTitle:(NSString *)cancelButtonTitle { %log; %orig; }
+- (NSString *)cancelButtonTitle { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setContainerView:(UIView *)containerView { %log; %orig; }
+- (UIView *)containerView { %log; UIView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setCustomView:(UIView *)customView { %log; %orig; }
+- (UIView *)customView { %log; UIView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)dealloc { %log; %orig; }
+//- (void)setDelegate:(__weak id <WCActionSheetDelegate> )delegate { %log; %orig; }
+//- (__weak id <WCActionSheetDelegate> )delegate { %log; __weak id <WCActionSheetDelegate>  r = %orig; HBLogDebug(@" = 0x%x", (unsigned int)r); return r; }
+//- (void)setDelegateEx:(__weak id <WCActionSheetDelegate> )delegateEx { %log; %orig; }
+//- (__weak id <WCActionSheetDelegate> )delegateEx { %log; __weak id <WCActionSheetDelegate>  r = %orig; HBLogDebug(@" = 0x%x", (unsigned int)r); return r; }
+- (void)setDestructiveButtonIndex:(long long )destructiveButtonIndex { %log; %orig; }
+- (long long )destructiveButtonIndex { %log; long long  r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (void)deviceDidRotate:(id)arg1 { %log; %orig; }
+- (void)dismissWithClickedButtonIndex:(long long)arg1 animated:(_Bool)arg2 { %log; %orig; }
+- (void)setFirstOtherButtonIndex:(long long )firstOtherButtonIndex { %log; %orig; }
+- (long long )firstOtherButtonIndex { %log; long long  r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (id)genGrayBarView { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)gestureRecognizer:(id)arg1 shouldReceiveTouch:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)getActionSheetName { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setHasSeplineButton:(_Bool )hasSeplineButton { %log; %orig; }
+- (_Bool )hasSeplineButton { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (double)heightOfWholeSheet { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (id)init { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)initWithTitle:(id)arg1 delegate:(id)arg2 cancelButtonTitle:(id)arg3 destructiveButtonTitle:(id)arg4 otherButtonTitles:(id)arg5 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setM_lastOrientation:(long long )m_lastOrientation { %log; %orig; }
+- (long long )m_lastOrientation { %log; long long  r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (id)makeCustomView:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)makeItemViewWithItem:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)makeNormalView:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)makePannelViewWithButtonList:(id)arg1 withCancelButtonTitle:(id)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)makeTitleViewWithTitle:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setNumberOfButtons:(unsigned long long )numberOfButtons { %log; %orig; }
+- (unsigned long long )numberOfButtons { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (unsigned long long)numberOfButtonsExcludingCancelButton { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (void)onMainWindowFrameChanged { %log; %orig; }
+- (void)onOpenApiWillBeginShare:(id)arg1 { %log; %orig; }
+- (void)onStatusBarFrameChanged { %log; %orig; }
+- (void)setPannelView:(UIView *)pannelView { %log; %orig; }
+- (UIView *)pannelView { %log; UIView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)reloadInnerView { %log; %orig; }
+- (void)setActionSheetName:(id)arg1 { %log; %orig; }
+- (void)setCancelButtonTextColor:(id)arg1 { %log; %orig; }
+- (void)setFrame:(struct CGRect)arg1 { %log; %orig; }
+- (void)setShouldHide:(_Bool )shouldHide { %log; %orig; }
+- (_Bool )shouldHide { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setShouldRelease:(_Bool )shouldRelease { %log; %orig; }
+- (_Bool )shouldRelease { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setTitle:(NSString *)title { %log; %orig; }
+- (NSString *)title { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setTitleView:(UIView *)titleView { %log; %orig; }
+- (UIView *)titleView { %log; UIView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)shouldHideOnRotate { %log; %orig; }
+- (void)showInView:(id)arg1 { %log; %orig; }
+- (void)tapOut:(id)arg1 { %log; %orig; }
+- (NSString *)debugDescription { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)description { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long )hash { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (Class )superclass { %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end

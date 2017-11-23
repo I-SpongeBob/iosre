@@ -1,0 +1,48 @@
+%hook WCAccountLoginLastUserViewController
+//- (void).cxx_destruct { %log; %orig; }
+- (void)WCBaseInfoItemEditChanged:(id)arg1 { %log; %orig; }
+- (void)actionSheet:(id)arg1 clickedButtonAtIndex:(long long)arg2 { %log; %orig; }
+- (void)adjustTableViewRect { %log; %orig; }
+- (void)adjustViewAndNavBarRect { %log; %orig; }
+- (id)createHeadImgView { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)createPwdInputView:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)createVoicePrintLoginBtn { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)dealloc { %log; %orig; }
+- (void)didReceiveMemoryWarning { %log; %orig; }
+- (id)getDisplayLoginName { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getDisplayPhoneNumber { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getSwitchBtnTitleWithCurrentLoginType:(unsigned long long)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (double)getVisibleHeight { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (void)hideKeyBoard { %log; %orig; }
+- (id)init { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)initData { %log; %orig; }
+- (void)initFooterView { %log; %orig; }
+- (void)initHeaderView { %log; %orig; }
+- (void)initNavigationBar { %log; %orig; }
+- (void)initPasswordView { %log; %orig; }
+- (void)initVerifyCodeView { %log; %orig; }
+- (void)initVoicePrintView { %log; %orig; }
+- (_Bool)isLastLoginAcountTypePhone { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isLastQQLogin { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setM_iCount:(long long )m_iCount { %log; %orig; }
+- (long long )m_iCount { %log; long long  r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (void)onBothDeviceClicked { %log; %orig; }
+- (void)onLastUserChangeAccountForIPad:(id)arg1 { %log; %orig; }
+- (void)onLastUserVoicePrintLogin { %log; %orig; }
+- (void)onMore:(id)arg1 { %log; %orig; }
+- (void)onNext { %log; %orig; }
+- (void)onResendClicked { %log; %orig; }
+- (void)onSwitch { %log; %orig; }
+- (void)onSwitchPwdInput { %log; %orig; }
+- (void)setDelegate:(id)arg1 { %log; %orig; }
+- (void)startTimer { %log; %orig; }
+- (void)switchEaseInOutToType:(long long)arg1 { %log; %orig; }
+- (void)updateSendVerifyCodeButton { %log; %orig; }
+- (_Bool)useGrayBackgroundColor { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)vcResignFirstResponder { %log; %orig; }
+- (void)viewDidLoad { %log; %orig; }
+- (NSString *)debugDescription { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)description { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long )hash { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (Class )superclass { %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end

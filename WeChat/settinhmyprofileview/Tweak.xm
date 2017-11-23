@@ -1,0 +1,34 @@
+%hook SettingMyProfileViewController
+//- (void).cxx_destruct { %log; %orig; }
+- (void)DeleteInvoiceInfo:(unsigned int)arg1 { %log; %orig; }
+- (void)OnGetInvoiceRet:(_Bool)arg1 andResult:(id)arg2 fromScene:(unsigned int)arg3 { %log; %orig; }
+- (void)SaveInvoiceInfo:(id)arg1 { %log; %orig; }
+- (void)dealloc { %log; %orig; }
+- (id)getSettingHeadImage { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)initDeepLinkConfig { %log; %orig; }
+- (_Bool)isNeedShowWCPay { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)makeChangeImgCell:(id)arg1 cellInfo:(id)arg2 { %log; %orig; }
+- (void)makeQRInfoCell:(id)arg1 cellInfo:(id)arg2 { %log; %orig; }
+- (void)onChangeImg:(id)arg1 { %log; NSLog(@"%@",[arg1 class]);%orig; }
+- (void)onInfoChange { %log; %orig; }
+- (void)onModifyNickName:(id)arg1 vc:(id)arg2 { %log; %orig; }
+- (void)onSettingChanged:(int)arg1 { %log; %orig; }
+- (void)oplogRet:(int)arg1 errMsg:(id)arg2 eventID:(unsigned int)arg3 cgiWrap:(id)arg4 { %log; %orig; }
+- (void)saveNewAlias { %log; %orig; }
+- (void)showInvoiceView { %log; %orig; }
+- (void)showModifyNickName { %log; %orig; }
+- (void)showModifyUserName { %log; %orig; }
+- (void)showMyAddressInfoView { %log; %orig; }
+- (void)showQRInfoView { %log; %orig; }
+- (void)showSocialInfo { %log; %orig; }
+- (void)updateHead:(id)arg1 { %log; %orig; }
+- (void)updateTableCell { %log; %orig; }
+- (void)viewDidLayoutSubviews { %log; %orig; }
+- (void)viewDidLoad { %log; %orig; }
+- (void)viewDidTransitionToNewSize { %log; %orig; }
+- (void)willAppear { %log; %orig; }
+- (NSString *)debugDescription { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)description { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long )hash { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (Class )superclass { %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end

@@ -1,0 +1,10 @@
+Package: com.iosre.iosregreetings
+Name: iOSREGreetings
+Depends: mobilesubstrate ,  firmware(>= 8.0)
+Version: 1.0
+Architecture: iphoneos-arm
+Description: Greeting from iOSRE!
+Maintainer: xieruxin
+Author: xieruxin
+Section: Tweaks
+Homepage: http://bbs.iosre.com

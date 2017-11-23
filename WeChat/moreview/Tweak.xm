@@ -1,0 +1,106 @@
+#import "qq.h"
+
+%hook MoreViewController
+//- (id).cxx_construct { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+//- (void).cxx_destruct { %log; %orig; }
+- (void)MessageReturn:(unsigned int)arg1 MessageInfo:(id)arg2 Event:(unsigned int)arg3 { %log; %orig; }
+- (void)OnEmoticonRecommendNewStateChanged:(_Bool)arg1 { %log; %orig; }
+- (void)OnGetBankCardReddotData { %log; %orig; }
+- (void)OnGetNewXmlMsg:(id)arg1 Type:(id)arg2 MsgWrap:(id)arg3 { %log; %orig; }
+- (void)OnStatusChangedOrderListCountChanged:(unsigned int)arg1 { %log; %orig; }
+- (void)OnWCMallActivityChanged { %log; %orig; }
+- (void)OnWCMallShowStatusInMoreViewChanged { %log; %orig; }
+- (void)ReloadWallet { %log; %orig; }
+- (void)addFunctionSection { %log; %orig; }
+- (void)addProfileSection { %log; %orig; }
+- (void)addSettingSection { %log; %orig; }
+- (void)addWCMallSection { %log; %orig; }
+- (void)setBIsEnterShareCardListFromOuterJump:(_Bool )bIsEnterShareCardListFromOuterJump { %log; %orig; }
+- (_Bool )bIsEnterShareCardListFromOuterJump { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setBIsShareCardListShowSvrRedDot:(_Bool )bIsShareCardListShowSvrRedDot { %log; %orig; }
+- (_Bool )bIsShareCardListShowSvrRedDot { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)cardDeeplink { %log; %orig; }
+- (void)checkDBAutoRecover { %log; %orig; }
+- (void)checkReload { %log; %orig; }
+- (void)dealloc { %log; %orig; }
+- (void)didReceiveMemoryWarning { %log; %orig; }
+- (id)getEnteranceViewContoller { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getSettingHeadImage { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned int)getTotalCount { %log; unsigned int r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (id)getUpdateWechatRedDotConfig { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getVCWithDeepLinkName:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)init { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)initDeepLinkConfig { %log; %orig; }
+- (void)initLoadingView { %log; %orig; }
+- (void)initMessageIdToListen { %log; %orig; }
+- (void)initUpdateWechatRedDotConfig { %log; %orig; }
+- (void)initView { %log; %orig; }
+- (_Bool)isNeedShowWCPay { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isNeedShowWCPayInTabNew { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setLoadingView:(WCBizLoadingView *)loadingView { %log; %orig; }
+- (WCBizLoadingView *)loadingView { %log; WCBizLoadingView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)makeProfileCell:(id)arg1 { %log; %orig; }
+- (void)makeWCCardView:(id)arg1 { %log; %orig; }
+- (void)makeWCCell:(id)arg1 { %log; %orig; }
+- (void)makeWCPayView:(id)arg1 { %log; %orig; }
+- (void)onCloseFavTimeOut { %log; %orig; }
+- (void)onFavoritesClose { %log; %orig; }
+- (void)onGetUpdateInfoOk { %log; %orig; }
+- (void)onHeadImageChange:(id)arg1 { %log; %orig; }
+- (void)onPatternLockLogicOperateCancel { %log; %orig; }
+- (void)onPatternLockLogicOperateSuccess { %log; %orig; }
+- (void)onPatternLockSvrCheckStatusBack:(unsigned long long)arg1 { %log; %orig; }
+- (void)onPatternLockSvrCheckStatusFail { %log; %orig; }
+- (void)onSettingChanged:(int)arg1 { %log; %orig; }
+- (void)onSettingExtChanged:(int)arg1 { %log; %orig; }
+- (void)onShowMyQrCode { %log; %orig; }
+- (void)onWCCardLayoutRedDotChanged { %log; %orig; }
+- (void)onWCCardMessageEntryTipChanged:(id)arg1 { %log; %orig; }
+- (void)onWCCardMessageUnreadCountChanged:(id)arg1 { %log; %orig; }
+- (void)onWCCardTips { %log; %orig; }
+- (void)onWCSettingRedPointChange { %log; %orig; }
+- (void)onWechatEntranceRedPointChange { %log; %orig; }
+- (void)openWCPayView { %log; %orig; }
+- (void)setPatternLockLogicTag:(unsigned int )patternLockLogicTag { %log; %orig; }
+- (unsigned int )patternLockLogicTag { %log; unsigned int  r = %orig; HBLogDebug(@" = %u", r); return r; }
+- (void)pluginsChanged:(id)arg1 { %log; %orig; }
+- (void)reloadMoreView { %log; %orig; }
+- (void)reportNativeWCPayClick { %log; %orig; }
+- (void)setResultToastView:(MMAnimationTipView *)resultToastView { %log; %orig; }
+- (MMAnimationTipView *)resultToastView { %log; MMAnimationTipView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setUpdateWechatRedDotConfig:(id)arg1 { %log; %orig; }
+- (void)showAppleWatchUpdateView { %log; %orig; }
+- (void)showAppleWatchView { %log; %orig; }
+- (void)showChangeLanguage { %log; %orig; }
+- (void)showEmoticonStoreView { %log; %orig; }
+- (void)showFavoriteView { %log; %orig; }
+- (void)showHtml5PayView { %log; %orig; }
+- (void)showKitchen { %log; %orig; }
+- (void)showMyQRCodeInProfileView { %log; %orig; }
+- (void)showMyWCView { %log; %orig; }
+- (void)showOverseaNativePayView { %log; %orig; }
+- (void)showPrivateSetting { %log; %orig; }
+- (void)showPrivateSettingWithContactVerify:(_Bool)arg1 animated:(_Bool)arg2 { %log; %orig; }
+- (void)showProfileView { %log; %orig; }
+- (void)showSettingView { %log; %orig; }
+- (void)showShareCardView { %log; %orig; }
+- (void)showShareCardViewInternal { %log; %orig; }
+- (void)showToastTipsViewWithText:(id)arg1 isSuccess:(_Bool)arg2 { %log; %orig; }
+- (void)showWCCardView { %log; %orig; }
+- (void)showWCPayView { %log; %orig; }
+- (void)showWcRecentPrivacySetting:(unsigned long long)arg1 { %log; %orig; }
+- (void)startLoading { %log; %orig; }
+- (void)stopLoading { %log; %orig; }
+- (void)updateHead:(id)arg1 { %log; %orig; }
+- (void)updateTabBarBadge { %log; %orig; }
+- (void)updateViewWhenSelectTab:(_Bool)arg1 { %log; %orig; }
+- (void)viewDidAppear:(_Bool)arg1 { %log; %orig; }
+- (void)viewDidLayoutSubviews { %log; %orig; }
+- (void)viewDidLoad { %log; %orig; }
+- (void)viewWillAppear:(_Bool)arg1 { %log; %orig; }
+- (void)willAppear { %log; %orig; }
+- (NSString *)debugDescription { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)description { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long )hash { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (Class )superclass { %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end

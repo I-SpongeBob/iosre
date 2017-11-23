@@ -1,0 +1,43 @@
+%hook WCAccountFillPhoneViewController
+//- (void).cxx_destruct { %log; %orig; }
+- (void)CountryCodePickerDidPickCountryCode:(id)arg1 { %log; %orig; }
+- (void)WCBaseInfoItemEditChanged:(id)arg1 { %log; %orig; }
+- (void)WCBaseInfoItemPressReturnKey:(id)arg1 { %log; %orig; }
+- (void)checkNextBtnEnable { %log; %orig; }
+- (id)createBottomBtn:(id)arg1 target:(id)arg2 sel:(SEL)arg3 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)dealloc { %log; %orig; }
+- (void)fillCountryCode:(id)arg1 phoneNum:(id)arg2 { %log; %orig; }
+- (void)findCountryCode { %log; %orig; }
+- (id)getArchive { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)hideKeyBoard { %log; %orig; }
+- (id)init { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)initNavigationBar { %log; %orig; }
+- (void)initTableView { %log; %orig; }
+- (void)setM_bAgreementMobileCanBeFound:(_Bool )m_bAgreementMobileCanBeFound { %log; %orig; }
+- (_Bool )m_bAgreementMobileCanBeFound { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)onByPhonePwdLoginByVerifyCode { %log; %orig; }
+- (void)onLinkClicked:(id)arg1 withRect:(struct CGRect)arg2 { %log; %orig; }
+- (void)onMobileCanBeFoundAgreementClick:(id)arg1 { %log; %orig; }
+- (void)onNext { %log; %orig; }
+- (_Bool)recoverFromArchive:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)refreshViewWithData:(id)arg1 { %log; %orig; }
+- (void)setDelegate:(id)arg1 { %log; %orig; }
+- (void)setHeaderTip:(id)arg1 { %log; %orig; }
+- (void)setLeftBarBtnTitle:(id)arg1 { %log; %orig; }
+- (void)setLeftBarBtnTitleForNakedWxProtect:(id)arg1 { %log; %orig; }
+- (void)setViewY { %log; %orig; }
+- (void)showBindFooter { %log; %orig; }
+- (void)showCountryCode { %log; %orig; }
+- (void)showCountryCodePickerView { %log; %orig; }
+- (void)showLoginFooter { %log; %orig; }
+- (void)showMobileCanBeFound { %log; %orig; }
+- (void)showNextFooter:(id)arg1 { %log; %orig; }
+- (void)showRegFooter { %log; %orig; }
+- (void)vcBecomeFirstResponder { %log; %orig; }
+- (void)vcResignFirstResponder { %log; %orig; }
+- (void)viewDidLoad { %log; %orig; }
+- (NSString *)debugDescription { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)description { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long )hash { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (Class )superclass { %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end

@@ -1,0 +1,57 @@
+%hook WCCommentListViewController
+- (void)setBUnreadOnly:(_Bool )bUnreadOnly { %log; %orig; }
+- (_Bool )bUnreadOnly { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+//- (void).cxx_destruct { %log; %orig; }
+- (void)onSetWCMessageNotifyFinished:(int)arg1 dataItemID:(id)arg2 opFlag:(_Bool)arg3 { %log; %orig; }
+- (void)onHeadImageClicked:(id)arg1 { %log; %orig; }
+- (void)onReveiceWCDeleteMessage:(id)arg1 { %log; %orig; }
+- (void)onViewAnimationWillHide { %log; %orig; }
+- (void)onCommentListViewDataChanged:(id)arg1 { %log; %orig; }
+- (void)onDeleteData { %log; %orig; }
+- (void)onRestartUpload { %log; %orig; }
+- (void)onClearList:(id)arg1 { %log; %orig; }
+- (long long)tableView:(id)arg1 editingStyleForRowAtIndexPath:(id)arg2 { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (void)tableView:(id)arg1 didEndEditingRowAtIndexPath:(id)arg2 { %log; %orig; }
+- (void)tableView:(id)arg1 willBeginEditingRowAtIndexPath:(id)arg2 { %log; %orig; }
+- (void)tableView:(id)arg1 commitEditingStyle:(long long)arg2 forRowAtIndexPath:(id)arg3 { %log; %orig; }
+- (void)actionSheet:(id)arg1 clickedButtonAtIndex:(long long)arg2 { %log; %orig; }
+- (void)clearList { %log; %orig; }
+- (void)onClickWCImage:(id)arg1 { %log; %orig; }
+- (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2 { %log; %orig; }
+- (void)openWCCommentDetail:(id)arg1 { %log; %orig; }
+- (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2 { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (void)tableView:(id)arg1 accessoryButtonTappedForRowWithIndexPath:(id)arg2 { %log; %orig; }
+- (double)tableView:(id)arg1 heightForRowAtIndexPath:(id)arg2 { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)isCellMarkedAsIgnoreNotification:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)updateEditInfo:(id)arg1 indexPath:(id)arg2 { %log; %orig; }
+- (void)updateCacheBySnsAdNotInterestsMsg:(id)arg1 { %log; %orig; }
+- (void)updateCacheBySnsObjDeleteMsg:(id)arg1 { %log; %orig; }
+- (void)updateCommentCache:(id)arg1 { %log; %orig; }
+- (id)getLoadMoreCell { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getCellContentViewAtIndexPath:(id)arg1 superView:(id)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)shouldOpenNewLineAtY:(double)arg1 withLineHeight:(double)arg2 richTextView:(id)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (double)getCellContentViewHeightAtIndexPath:(id)arg1 { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (void)MMRefreshTableFooterDidTriggerRefresh:(id)arg1 { %log; %orig; }
+- (void)onLoadMore { %log; %orig; }
+- (void)scrollViewDidScroll:(id)arg1 { %log; %orig; }
+- (void)initTableView { %log; %orig; }
+- (void)initTableFooterView { %log; %orig; }
+- (void)getMoreData { %log; %orig; }
+- (void)getData { %log; %orig; }
+- (void)addWCMessagesWithArray:(id)arg1 MoreData:(_Bool)arg2 { %log; %orig; }
+- (id)getObjIDByWCMessage:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)reportBrowseMessageListInfo { %log; %orig; }
+- (void)willDisappear { %log; %orig; }
+- (void)viewDidLayoutSubviews { %log; %orig; }
+- (void)viewWillDisappear:(_Bool)arg1 { %log; %orig; }
+- (void)viewDidAppear:(_Bool)arg1 { %log; %orig; }
+- (void)viewWillPush:(_Bool)arg1 { %log; %orig; }
+- (void)viewDidLoad { %log; %orig; }
+- (void)dealloc { %log; %orig; }
+- (id)init { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)debugDescription { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)description { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long )hash { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (Class )superclass { %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end
